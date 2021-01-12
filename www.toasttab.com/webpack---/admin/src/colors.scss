@@ -1,0 +1,63 @@
+
+// Blue
+$iceburg: #d3e6f9;
+$clear-skies: #7cb4ee;
+$curious-blue: #2583e3;
+$curious-blue-50: rgba(37, 131, 227, 0.5);
+$royal-family: #1d68b5;
+$denim: #164e88;
+
+// Light Grey
+$white-lilac: #f8f9fc;
+$athens-grey: #eaecf1;
+$baby-seal: #dddde4;
+$ghost: #c9cad3;
+$dolphin: #a0a2ad;
+
+// Error
+$cotton-candy: #fdd6dd;
+$red-haze: #f98699;
+$candy-red: #f53655;
+$mars-rover: #c42b44;
+$brick-n-mortar: #932033;
+
+
+$text-primary: rgba(0,0,0,0.87);
+$text-secondary: rgba(0,0,0,.68);
+$text-tertiary: rgba(0,0,0,.5);
+$text-disabled: rgba(0,0,0,.38);
+
+$table-stripe-color: rgba(234,236,241,.3);
+$table-header-border-color: rgba(0,0,0,0.24);
+
+
+$card-box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.15);
+$card-box-shadow-lighter: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+
+
+%material-icons {
+    font-family:'Material Icons';
+    font-style:normal;
+    font-weight:400;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+
+
+// WEBPACK FOOTER //
+// ./admin/src/colors.scss

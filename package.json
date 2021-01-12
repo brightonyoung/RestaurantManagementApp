@@ -1,0 +1,19 @@
+{
+  "name": "restaurantmanagementapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brightonyoung/RestaurantManagementApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brightonyoung/RestaurantManagementApp/issues"
+  },
+  "homepage": "https://github.com/brightonyoung/RestaurantManagementApp#readme"
+}

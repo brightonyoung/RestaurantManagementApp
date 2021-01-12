@@ -1,0 +1,165 @@
+#angular {
+  [data-admin-frame-bootstrap] {
+    & > .navbar {
+      .navbar-inner {
+        padding-left:4px;
+        padding-right:8px;
+      }
+      .admin-toolbar {
+        padding-left:8px;
+        padding-right:8px;
+      }
+    }
+    @media (max-width:979px) {
+      & > .navbar {
+        .navbar-inner {
+          padding-left:0px;
+          padding-right:3px;
+        }
+        .admin-toolbar {
+          padding-left:0px;
+          padding-right:0px;
+        }
+      }
+    }
+  }
+}
+
+[data-admin-frame-bootstrap] {
+  .navbar > .navbar-inner .brand {
+    padding: 4px 8px 2px 0;
+  }
+  .navbar > .navbar-inner {
+    background:rgb(47, 47, 47);
+  }
+  .navbar-inverse .nav>li>a:hover,
+  .navbar-inverse .nav li.dropdown.open>.dropdown-toggle, .navbar-inverse .nav li.dropdown.active>.dropdown-toggle, .navbar-inverse .nav li.dropdown.open.active>.dropdown-toggle{
+    color: #ff7f01;
+    background-color:rgb(47, 47, 47);
+    background-image:none;
+  }
+
+  .navbar .restaurant-title {
+    font-weight: bold;
+  }
+
+  .dropdown-menu {
+    li {
+      text-shadow:none;
+    }
+    a {
+      text-align:left;
+    }
+    a.btn-success {
+      color: #FFFFFF;
+    }
+  }
+
+
+  @media (max-width: 979px) {
+    .navbar-fixed-top {
+      margin-bottom: 0;
+    }
+
+    .navbar > .navbar-inner .brand {
+      padding: 5px 8px 2px 4px;
+    }
+    .navbar > .navbar-inner .pull-right>li>.dropdown-menu .dropdown-submenu .dropdown-menu {
+      margin: 0 0 0 15px;
+    }
+    .navbar-inverse .navbar-inner .nav-collapse .nav>li>a,
+    .navbar-inverse .navbar-inner .nav-collapse .dropdown-menu a {
+      color:white;
+    }
+    .navbar-inverse .navbar-inner .nav>li>a:hover,
+    .navbar-inverse .navbar-inner .dropdown-menu>.active>a,
+    .navbar-inverse .navbar-inner .nav li.dropdown.open>.dropdown-toggle,
+    .navbar-inverse .navbar-inner .nav li.dropdown.active>.dropdown-toggle,
+    .navbar-inverse .navbar-inner .nav li.dropdown.open.active>.dropdown-toggle,
+    .navbar-inverse .navbar-inner .dropdown-menu>li>a:hover,
+    .navbar-inverse .navbar-inner .dropdown-menu>li>a:focus,
+    .navbar-inverse .navbar-inner .dropdown-submenu:hover>a,
+    .navbar-inverse .navbar-inner .dropdown-submenu:focus>a {
+      color: #ff7f01;
+      background-color:#222;
+      background-image:none;
+    }
+    .navbar-inverse .navbar-inner .dropdown-menu>li.disabled>a:hover,
+    .navbar-inverse .navbar-inner .dropdown-menu>li.disabled>a:focus {
+      background-color:none;
+      color:#999;
+    }
+    .navbar-inverse .navbar-inner input.typeahead {
+      background-color:transparent;
+      color:white;
+      font-size:16px;
+    }
+    .navbar-inverse > .navbar-inner .dropdown-menu .divider {
+      border-bottom: none;
+    }
+    .navbar-inverse > .navbar-inner .dropdown-submenu:hover>.dropdown-menu {
+      display:none;
+    }
+    .dropdown-submenu>a:hover:after {
+      border-left-color:#ff7f01;
+    }
+  }
+
+  .navbar-inverse .nav>li>a {
+    color: #fff;
+    text-shadow:none;
+    font-weight:normal;
+  }
+  .navbar-inverse .nav li.dropdown>.dropdown-toggle .caret {
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+  }
+  .navbar-inverse .nav li.dropdown.open>.dropdown-toggle .caret,
+  .navbar-inverse .nav li.dropdown>a:hover .caret {
+    border-top-color: #ff7f01;
+    border-bottom-color: #ff7f01;
+  }
+
+  @media (max-width: 768px) {
+    .navbar-fixed-top,
+    .navbar-fixed-bottom,
+    .navbar-static-top {
+      margin: 0px;
+    }
+  }
+
+  .navbar {
+    .navbar-inner {
+      min-height:43px;
+      padding-top:4px;
+      box-sizing: content-box;
+      .container,
+      .container-fluid {
+        .nav.pull-right {
+          margin-right: -14px;
+        }
+      }
+    }
+  }
+
+  @media print {
+    .navbar {
+      display: none;
+    }
+  }
+
+  #submenuClone:before {
+    content: none !important;
+  }
+  #submenuClone {
+    border-top-right-radius:0px;
+  }
+  #submenuClone:after {
+    content: none !important;
+  }
+}
+
+
+
+// WEBPACK FOOTER //
+// ./adminFrame/src/adminNavBar.scss

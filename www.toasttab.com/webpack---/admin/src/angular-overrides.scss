@@ -1,0 +1,242 @@
+/* UI Kit (Angular 1.0) overrides */
+
+@media (max-width: 1279px) {
+  #angular.toast-3-0 .container {
+    width: auto;
+    padding: 0;
+  }
+}
+
+#angular.toast-3-0 #discountListPage data-table,
+#angular.toast-3-0 #discountReasonsPage data-table {
+  display: block;
+  width: 100%;
+}
+
+#angular.toast-3-0 #discountListPage data-table dt-action,
+#angular.toast-3-0 #discountListPage data-table dt-head,
+#angular.toast-3-0 #discountListPage data-table dt-tr,
+#angular.toast-3-0 #discountReasonsPage data-table dt-action,
+#angular.toast-3-0 #discountReasonsPage data-table dt-head,
+#angular.toast-3-0 #discountReasonsPage data-table dt-tr {
+  min-width: 960px;
+}
+
+#angular.toast-3-0 flags hr,
+#angular.toast-3-0 prep-time hr,
+#angular.toast-3-0 price-based-prep hr,
+#angular.toast-3-0 delivery-time hr,
+#angular.toast-3-0 day-service-periods hr,
+#angular.toast-3-0 date-overrides hr,
+#angular.toast-3-0 order-management hr,
+#angular.toast-3-0 [s-overtime_rules] hr {
+  display: none;
+}
+
+#angular.toast-3-0 flags [c-type~=heading-sm-primary],
+#angular.toast-3-0 prep-time [c-type~=heading-sm-primary],
+#angular.toast-3-0 price-based-prep [c-type~=heading-sm-primary],
+#angular.toast-3-0 delivery-time [c-type~=heading-sm-primary],
+#angular.toast-3-0 day-service-periods [c-type~=heading-sm-primary],
+#angular.toast-3-0 date-overrides [c-type~=heading-sm-primary],
+#angular.toast-3-0 order-management [c-type~=heading-sm-primary],
+#angular.toast-3-0 [s-overtime_rules] [c-type~=heading-sm-primary] {
+  color: rgba(0, 0, 0, 0.68);
+  margin-top: 36px;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 24px;
+  padding-bottom: 4px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #c9cad3;
+}
+
+#angular.toast-3-0 day-service-periods [c-type~=caption-primary] ikon {
+  vertical-align: top;
+}
+
+#angular.toast-3-0 service-periods-modal [c-modal~=container] > div {
+  min-height: 400px;
+}
+
+#angular.toast-3-0 date-service-periods-modal [c-modal~=container] > div {
+  min-height: 500px;
+}
+
+#angular.toast-3-0.embedded .container [c-type~=heading-sm-primary],
+#angular.toast-3-0.embedded .container-fluid [c-type~=heading-sm-primary] {
+  padding: 0 8px;
+}
+
+#angular.toast-3-0.embedded .container [c-input~=xl],
+#angular.toast-3-0.embedded .container-fluid [c-input~=xl] {
+  width: 100%;
+}
+
+#angular.toast-3-0.embedded .container accordion > header > span,
+#angular.toast-3-0.embedded .container-fluid accordion > header > span {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#angular.toast-3-0.embedded .container [c-accordion~=body],
+#angular.toast-3-0.embedded .container-fluid [c-accordion~=body] {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#angular.toast-3-0.embedded .container [s-overtime_rules] > div,
+#angular.toast-3-0.embedded .container-fluid [s-overtime_rules] > div {
+  margin-left: 8px;
+}
+
+#angular.toast-3-0.embedded .container #discountListPage data-table dt-action,
+#angular.toast-3-0.embedded .container #discountReasonsPage data-table dt-action,
+#angular.toast-3-0.embedded .container-fluid #discountListPage data-table dt-action,
+#angular.toast-3-0.embedded .container-fluid #discountReasonsPage data-table dt-action {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#angular.toast-3-0.embedded .container prep-time .input-container,
+#angular.toast-3-0.embedded .container prep-time [c-type~=body-sm-secondary],
+#angular.toast-3-0.embedded .container price-based-prep .input-container,
+#angular.toast-3-0.embedded .container price-based-prep [c-type~=body-sm-secondary],
+#angular.toast-3-0.embedded .container delivery-time .input-container,
+#angular.toast-3-0.embedded .container delivery-time [c-type~=body-sm-secondary],
+#angular.toast-3-0.embedded .container day-service-periods .input-container,
+#angular.toast-3-0.embedded .container day-service-periods [c-type~=body-sm-secondary],
+#angular.toast-3-0.embedded .container order-management .input-container,
+#angular.toast-3-0.embedded .container order-management [c-type~=body-sm-secondary],
+#angular.toast-3-0.embedded .container date-overrides .input-container,
+#angular.toast-3-0.embedded .container date-overrides [c-type~=body-sm-secondary],
+#angular.toast-3-0.embedded .container-fluid prep-time .input-container,
+#angular.toast-3-0.embedded .container-fluid prep-time [c-type~=body-sm-secondary],
+#angular.toast-3-0.embedded .container-fluid price-based-prep .input-container,
+#angular.toast-3-0.embedded .container-fluid price-based-prep [c-type~=body-sm-secondary],
+#angular.toast-3-0.embedded .container-fluid delivery-time .input-container,
+#angular.toast-3-0.embedded .container-fluid delivery-time [c-type~=body-sm-secondary],
+#angular.toast-3-0.embedded .container-fluid day-service-periods .input-container,
+#angular.toast-3-0.embedded .container-fluid day-service-periods [c-type~=body-sm-secondary],
+#angular.toast-3-0.embedded .container-fluid order-management .input-container,
+#angular.toast-3-0.embedded .container-fluid order-management [c-type~=body-sm-secondary],
+#angular.toast-3-0.embedded .container-fluid date-overrides .input-container,
+#angular.toast-3-0.embedded .container-fluid date-overrides [c-type~=body-sm-secondary] {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#angular.toast-3-0.embedded .container prep-time [c-type~=caption-primary] ikon,
+#angular.toast-3-0.embedded .container price-based-prep [c-type~=caption-primary] ikon,
+#angular.toast-3-0.embedded .container delivery-time [c-type~=caption-primary] ikon,
+#angular.toast-3-0.embedded .container day-service-periods [c-type~=caption-primary] ikon,
+#angular.toast-3-0.embedded .container order-management [c-type~=caption-primary] ikon,
+#angular.toast-3-0.embedded .container date-overrides [c-type~=caption-primary] ikon,
+#angular.toast-3-0.embedded .container-fluid prep-time [c-type~=caption-primary] ikon,
+#angular.toast-3-0.embedded .container-fluid price-based-prep [c-type~=caption-primary] ikon,
+#angular.toast-3-0.embedded .container-fluid delivery-time [c-type~=caption-primary] ikon,
+#angular.toast-3-0.embedded .container-fluid day-service-periods [c-type~=caption-primary] ikon,
+#angular.toast-3-0.embedded .container-fluid order-management [c-type~=caption-primary] ikon,
+#angular.toast-3-0.embedded .container-fluid date-overrides [c-type~=caption-primary] ikon {
+  vertical-align: top;
+}
+
+#angular.toast-3-0.embedded .container #add-date-override,
+#angular.toast-3-0.embedded .container-fluid #add-date-override {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+@media (max-width: 1279px) {
+  #angular.toast-3-0 .container [c-type~=heading-sm-primary],
+  #angular.toast-3-0 .container-fluid [c-type~=heading-sm-primary] {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  #angular.toast-3-0 .container [c-input~=xl],
+  #angular.toast-3-0 .container-fluid [c-input~=xl] {
+    width: 100%;
+  }
+
+  #angular.toast-3-0 .container accordion > header > span,
+  #angular.toast-3-0 .container-fluid accordion > header > span {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  #angular.toast-3-0 .container [c-accordion~=body],
+  #angular.toast-3-0 .container-fluid [c-accordion~=body] {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  #angular.toast-3-0 .container [s-overtime_rules] > div,
+  #angular.toast-3-0 .container-fluid [s-overtime_rules] > div {
+    margin-left: 8px;
+  }
+
+  #angular.toast-3-0 .container #discountListPage data-table dt-action,
+  #angular.toast-3-0 .container #discountReasonsPage data-table dt-action,
+  #angular.toast-3-0 .container-fluid #discountListPage data-table dt-action,
+  #angular.toast-3-0 .container-fluid #discountReasonsPage data-table dt-action {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  #angular.toast-3-0 .container prep-time .input-container,
+  #angular.toast-3-0 .container prep-time [c-type~=body-sm-secondary],
+  #angular.toast-3-0 .container price-based-prep .input-container,
+  #angular.toast-3-0 .container price-based-prep [c-type~=body-sm-secondary],
+  #angular.toast-3-0 .container delivery-time .input-container,
+  #angular.toast-3-0 .container delivery-time [c-type~=body-sm-secondary],
+  #angular.toast-3-0 .container day-service-periods .input-container,
+  #angular.toast-3-0 .container day-service-periods [c-type~=body-sm-secondary],
+  #angular.toast-3-0 .container date-overrides .input-container,
+  #angular.toast-3-0 .container date-overrides [c-type~=body-sm-secondary],
+  #angular.toast-3-0 .container order-management .input-container,
+  #angular.toast-3-0 .container order-management [c-type~=body-sm-secondary],
+  #angular.toast-3-0 .container-fluid prep-time .input-container,
+  #angular.toast-3-0 .container-fluid prep-time [c-type~=body-sm-secondary],
+  #angular.toast-3-0 .container-fluid price-based-prep .input-container,
+  #angular.toast-3-0 .container-fluid price-based-prep [c-type~=body-sm-secondary],
+  #angular.toast-3-0 .container-fluid delivery-time .input-container,
+  #angular.toast-3-0 .container-fluid delivery-time [c-type~=body-sm-secondary],
+  #angular.toast-3-0 .container-fluid day-service-periods .input-container,
+  #angular.toast-3-0 .container-fluid day-service-periods [c-type~=body-sm-secondary],
+  #angular.toast-3-0 .container-fluid date-overrides .input-container,
+  #angular.toast-3-0 .container-fluid date-overrides [c-type~=body-sm-secondary],
+  #angular.toast-3-0 .container-fluid order-management .input-container,
+  #angular.toast-3-0 .container-fluid order-management [c-type~=body-sm-secondary] {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  #angular.toast-3-0 .container prep-time price-based-prep [c-button~=white],
+  #angular.toast-3-0 .container price-based-prep price-based-prep [c-button~=white],
+  #angular.toast-3-0 .container delivery-time price-based-prep [c-button~=white],
+  #angular.toast-3-0 .container day-service-periods price-based-prep [c-button~=white],
+  #angular.toast-3-0 .container date-overrides price-based-prep [c-button~=white],
+  #angular.toast-3-0 .container order-management price-based-prep [c-button~=white],
+  #angular.toast-3-0 .container-fluid prep-time price-based-prep [c-button~=white],
+  #angular.toast-3-0 .container-fluid price-based-prep price-based-prep [c-button~=white],
+  #angular.toast-3-0 .container-fluid delivery-time price-based-prep [c-button~=white],
+  #angular.toast-3-0 .container-fluid day-service-periods price-based-prep [c-button~=white],
+  #angular.toast-3-0 .container-fluid date-overrides price-based-prep [c-button~=white],
+  #angular.toast-3-0 .container-fluid order-management price-based-prep [c-button~=white] {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  #angular.toast-3-0 .container #add-date-override,
+  #angular.toast-3-0 .container-fluid #add-date-override {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi92YXIvbGliL2plbmtpbnMvd29ya3NwYWNlL3RvYXN0d2ViX1BSLTE1Nzk1L3Jlc291cmNlcy9hZG1pbi9zcmMvYW5ndWxhci1vdmVycmlkZXMuc2NzcyIsIi92YXIvbGliL2plbmtpbnMvd29ya3NwYWNlL3RvYXN0d2ViX1BSLTE1Nzk1L3Jlc291cmNlcy9hZG1pbi9zcmMvY29sb3JzLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBRUEsb0NBQW9DO0FBR2hDO0VBRko7SUFJWSxZQUFXO0lBQ1gsV0FBUyxFQUNaLEVBQUE7O0FBTlQ7O0VBYVksZUFBYTtFQUNiLFlBQVUsRUFNYjtFQXBCVDs7Ozs7O0lBa0JnQixpQkFBZSxFQUNsQjs7QUFuQmI7Ozs7Ozs7O0VBK0JZLGNBQVksRUFDZjs7QUFoQ1Q7Ozs7Ozs7O0VBa0NZLDJCQ1pvQjtFRGFwQixpQkFBZ0I7RUFDaEIsZ0JBQWU7RUFDZixpQkFBZ0I7RUFDaEIsa0JBQWlCO0VBQ2pCLG9CQUFtQjtFQUNuQixvQkFBbUI7RUFDbkIsaUNDL0JHLEVEZ0NOOztBQTFDVDtFQStDZ0Isb0JBQWtCLEVBQ3JCOztBQWhEYjtFQW9EUSxrQkFBZ0IsRUFDbkI7O0FBckRMO0VBdURRLGtCQUFnQixFQUNuQjs7QUF4REw7O0VBNkRnQixlQUFjLEVBQ2pCOztBQTlEYjs7RUFnRWdCLFlBQVUsRUFDYjs7QUFqRWI7O0VBbUVnQixrQkFBaUI7RUFDakIsbUJBQWtCLEVBQ3JCOztBQXJFYjs7RUF1RWdCLGtCQUFpQjtFQUNqQixtQkFBa0IsRUFDckI7O0FBekViOztFQTRFb0IsaUJBQWUsRUFDbEI7O0FBN0VqQjs7OztFQW1Gd0Isa0JBQWdCO0VBQ2hCLG1CQUFpQixFQUNwQjs7QUFyRnJCOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7RUFnR29CLGtCQUFnQjtFQUNoQixtQkFBaUIsRUFDcEI7O0FBbEdqQjs7Ozs7Ozs7Ozs7O0VBcUd3QixvQkFBa0IsRUFDckI7O0FBdEdyQjs7RUEwR2dCLGlCQUFlO0VBQ2Ysa0JBQWdCLEVBQ25COztBQUdUO0VBL0dKOztJQW1IZ0Isa0JBQWlCO0lBQ2pCLG1CQUFrQixFQUNyQjtFQXJIYjs7SUF1SGdCLFlBQVUsRUFDYjtFQXhIYjs7SUEwSGdCLGtCQUFpQjtJQUNqQixtQkFBa0IsRUFDckI7RUE1SGI7O0lBOEhnQixrQkFBaUI7SUFDakIsbUJBQWtCLEVBQ3JCO0VBaEliOztJQW1Jb0IsaUJBQWUsRUFDbEI7RUFwSWpCOzs7O0lBMEl3QixrQkFBZ0I7SUFDaEIsbUJBQWlCLEVBQ3BCO0VBNUlyQjs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0lBdUpvQixrQkFBZ0I7SUFDaEIsbUJBQWlCLEVBQ3BCO0VBekpqQjs7Ozs7Ozs7Ozs7O0lBMkpvQixpQkFBZTtJQUNmLGtCQUFnQixFQUNuQjtFQTdKakI7O0lBZ0tnQixpQkFBZTtJQUNmLGtCQUFnQixFQUNuQixFQUFBIiwiZmlsZSI6ImFuZ3VsYXItb3ZlcnJpZGVzLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJAaW1wb3J0ICcuL2NvbG9ycy5zY3NzJztcblxuLyogVUkgS2l0IChBbmd1bGFyIDEuMCkgb3ZlcnJpZGVzICovXG4jYW5ndWxhci50b2FzdC0zLTAge1xuXG4gICAgQG1lZGlhIChtYXgtd2lkdGg6IDEyNzlweCkge1xuICAgICAgICAuY29udGFpbmVyIHtcbiAgICAgICAgICAgIHdpZHRoOiBhdXRvO1xuICAgICAgICAgICAgcGFkZGluZzowO1xuICAgICAgICB9XG4gICAgfVxuXG5cbiAgICAjZGlzY291bnRMaXN0UGFnZSxcbiAgICAjZGlzY291bnRSZWFzb25zUGFnZSB7XG4gICAgICAgIGRhdGEtdGFibGUge1xuICAgICAgICAgICAgZGlzcGxheTpibG9jaztcbiAgICAgICAgICAgIHdpZHRoOjEwMCU7XG4gICAgICAgICAgICBkdC1hY3Rpb24sXG4gICAgICAgICAgICBkdC1oZWFkLFxuICAgICAgICAgICAgZHQtdHIge1xuICAgICAgICAgICAgICAgIG1pbi13aWR0aDo5NjBweDtcbiAgICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgIH1cbiAgICBmbGFncyxcbiAgICBwcmVwLXRpbWUsXG4gICAgcHJpY2UtYmFzZWQtcHJlcCxcbiAgICBkZWxpdmVyeS10aW1lLFxuICAgIGRheS1zZXJ2aWNlLXBlcmlvZHMsXG4gICAgZGF0ZS1vdmVycmlkZXMsXG4gICAgb3JkZXItbWFuYWdlbWVudCxcbiAgICBbcy1vdmVydGltZV9ydWxlc10ge1xuICAgICAgICBociB7XG4gICAgICAgICAgICBkaXNwbGF5Om5vbmU7XG4gICAgICAgIH1cbiAgICAgICAgW2MtdHlwZX49aGVhZGluZy1zbS1wcmltYXJ5XSB7XG4gICAgICAgICAgICBjb2xvcjogJHRleHQtc2Vjb25kYXJ5O1xuICAgICAgICAgICAgbWFyZ2luLXRvcDogMzZweDtcbiAgICAgICAgICAgIGZvbnQtc2l6ZTogMjJweDtcbiAgICAgICAgICAgIGZvbnQtd2VpZ2h0OiA3MDA7XG4gICAgICAgICAgICBsaW5lLWhlaWdodDogMjRweDtcbiAgICAgICAgICAgIHBhZGRpbmctYm90dG9tOiA0cHg7XG4gICAgICAgICAgICBtYXJnaW4tYm90dG9tOiAyNHB4O1xuICAgICAgICAgICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICRnaG9zdDtcbiAgICAgICAgfVxuICAgIH1cbiAgICBkYXktc2VydmljZS1wZXJpb2RzIHtcbiAgICAgICAgW2MtdHlwZX49Y2FwdGlvbi1wcmltYXJ5XSB7XG4gICAgICAgICAgICBpa29uIHtcbiAgICAgICAgICAgICAgICB2ZXJ0aWNhbC1hbGlnbjp0b3A7XG4gICAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICB9XG4gICAgc2VydmljZS1wZXJpb2RzLW1vZGFsIFtjLW1vZGFsfj1jb250YWluZXJdPmRpdiB7XG4gICAgICAgIG1pbi1oZWlnaHQ6NDAwcHg7XG4gICAgfVxuICAgIGRhdGUtc2VydmljZS1wZXJpb2RzLW1vZGFsIFtjLW1vZGFsfj1jb250YWluZXJdPmRpdiB7XG4gICAgICAgIG1pbi1oZWlnaHQ6NTAwcHg7XG4gICAgfVxuICAgICYuZW1iZWRkZWQge1xuICAgICAgICAuY29udGFpbmVyLFxuICAgICAgICAuY29udGFpbmVyLWZsdWlkIHtcbiAgICAgICAgICAgIFtjLXR5cGV+PWhlYWRpbmctc20tcHJpbWFyeV0ge1xuICAgICAgICAgICAgICAgIHBhZGRpbmc6IDAgOHB4O1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgW2MtaW5wdXR+PXhsXSB7XG4gICAgICAgICAgICAgICAgd2lkdGg6MTAwJTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIGFjY29yZGlvbj5oZWFkZXI+c3BhbiB7XG4gICAgICAgICAgICAgICAgcGFkZGluZy1sZWZ0OiA4cHg7XG4gICAgICAgICAgICAgICAgcGFkZGluZy1yaWdodDogOHB4O1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgW2MtYWNjb3JkaW9ufj1ib2R5XSB7XG4gICAgICAgICAgICAgICAgcGFkZGluZy1sZWZ0OiA4cHg7XG4gICAgICAgICAgICAgICAgcGFkZGluZy1yaWdodDogOHB4O1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgW3Mtb3ZlcnRpbWVfcnVsZXNdIHtcbiAgICAgICAgICAgICAgICAmID4gZGl2IHtcbiAgICAgICAgICAgICAgICAgICAgbWFyZ2luLWxlZnQ6OHB4O1xuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgICNkaXNjb3VudExpc3RQYWdlLFxuICAgICAgICAgICAgI2Rpc2NvdW50UmVhc29uc1BhZ2Uge1xuICAgICAgICAgICAgICAgIGRhdGEtdGFibGUge1xuICAgICAgICAgICAgICAgICAgICBkdC1hY3Rpb24ge1xuICAgICAgICAgICAgICAgICAgICAgICAgcGFkZGluZy1sZWZ0OjhweDtcbiAgICAgICAgICAgICAgICAgICAgICAgIHBhZGRpbmctcmlnaHQ6OHB4O1xuICAgICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgfVxuICAgICAgICAgICAgcHJlcC10aW1lLFxuICAgICAgICAgICAgcHJpY2UtYmFzZWQtcHJlcCxcbiAgICAgICAgICAgIGRlbGl2ZXJ5LXRpbWUsXG4gICAgICAgICAgICBkYXktc2VydmljZS1wZXJpb2RzLFxuICAgICAgICAgICAgb3JkZXItbWFuYWdlbWVudCxcbiAgICAgICAgICAgIGRhdGUtb3ZlcnJpZGVzIHtcbiAgICAgICAgICAgICAgICAuaW5wdXQtY29udGFpbmVyLFxuICAgICAgICAgICAgICAgIFtjLXR5cGV+PWJvZHktc20tc2Vjb25kYXJ5XSB7XG4gICAgICAgICAgICAgICAgICAgIHBhZGRpbmctbGVmdDo4cHg7XG4gICAgICAgICAgICAgICAgICAgIHBhZGRpbmctcmlnaHQ6OHB4O1xuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICBbYy10eXBlfj1jYXB0aW9uLXByaW1hcnldIHtcbiAgICAgICAgICAgICAgICAgICAgaWtvbiB7XG4gICAgICAgICAgICAgICAgICAgICAgICB2ZXJ0aWNhbC1hbGlnbjp0b3A7XG4gICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICAjYWRkLWRhdGUtb3ZlcnJpZGUge1xuICAgICAgICAgICAgICAgIG1hcmdpbi1sZWZ0OjhweDtcbiAgICAgICAgICAgICAgICBtYXJnaW4tcmlnaHQ6OHB4O1xuICAgICAgICAgICAgfVxuICAgICAgICB9XG4gICAgfVxuICAgIEBtZWRpYSAobWF4LXdpZHRoOjEyNzlweCkge1xuICAgICAgICAuY29udGFpbmVyLFxuICAgICAgICAuY29udGFpbmVyLWZsdWlkIHtcbiAgICAgICAgICAgIFtjLXR5cGV+PWhlYWRpbmctc20tcHJpbWFyeV0ge1xuICAgICAgICAgICAgICAgIHBhZGRpbmctbGVmdDogOHB4O1xuICAgICAgICAgICAgICAgIHBhZGRpbmctcmlnaHQ6IDhweDtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIFtjLWlucHV0fj14bF0ge1xuICAgICAgICAgICAgICAgIHdpZHRoOjEwMCU7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICBhY2NvcmRpb24+aGVhZGVyPnNwYW4ge1xuICAgICAgICAgICAgICAgIHBhZGRpbmctbGVmdDogOHB4O1xuICAgICAgICAgICAgICAgIHBhZGRpbmctcmlnaHQ6IDhweDtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIFtjLWFjY29yZGlvbn49Ym9keV0ge1xuICAgICAgICAgICAgICAgIHBhZGRpbmctbGVmdDogOHB4O1xuICAgICAgICAgICAgICAgIHBhZGRpbmctcmlnaHQ6IDhweDtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIFtzLW92ZXJ0aW1lX3J1bGVzXSB7XG4gICAgICAgICAgICAgICAgJiA+IGRpdiB7XG4gICAgICAgICAgICAgICAgICAgIG1hcmdpbi1sZWZ0OjhweDtcbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICAjZGlzY291bnRMaXN0UGFnZSxcbiAgICAgICAgICAgICNkaXNjb3VudFJlYXNvbnNQYWdlIHtcbiAgICAgICAgICAgICAgICBkYXRhLXRhYmxlIHtcbiAgICAgICAgICAgICAgICAgICAgZHQtYWN0aW9uIHtcbiAgICAgICAgICAgICAgICAgICAgICAgIHBhZGRpbmctbGVmdDo4cHg7XG4gICAgICAgICAgICAgICAgICAgICAgICBwYWRkaW5nLXJpZ2h0OjhweDtcbiAgICAgICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIHByZXAtdGltZSxcbiAgICAgICAgICAgIHByaWNlLWJhc2VkLXByZXAsXG4gICAgICAgICAgICBkZWxpdmVyeS10aW1lLFxuICAgICAgICAgICAgZGF5LXNlcnZpY2UtcGVyaW9kcyxcbiAgICAgICAgICAgIGRhdGUtb3ZlcnJpZGVzLFxuICAgICAgICAgICAgb3JkZXItbWFuYWdlbWVudCB7XG4gICAgICAgICAgICAgICAgLmlucHV0LWNvbnRhaW5lcixcbiAgICAgICAgICAgICAgICBbYy10eXBlfj1ib2R5LXNtLXNlY29uZGFyeV0ge1xuICAgICAgICAgICAgICAgICAgICBwYWRkaW5nLWxlZnQ6OHB4O1xuICAgICAgICAgICAgICAgICAgICBwYWRkaW5nLXJpZ2h0OjhweDtcbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgcHJpY2UtYmFzZWQtcHJlcCBbYy1idXR0b25+PXdoaXRlXSB7XG4gICAgICAgICAgICAgICAgICAgIG1hcmdpbi1sZWZ0OjhweDtcbiAgICAgICAgICAgICAgICAgICAgbWFyZ2luLXJpZ2h0OjhweDtcbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICAjYWRkLWRhdGUtb3ZlcnJpZGUge1xuICAgICAgICAgICAgICAgIG1hcmdpbi1sZWZ0OjhweDtcbiAgICAgICAgICAgICAgICBtYXJnaW4tcmlnaHQ6OHB4O1xuICAgICAgICAgICAgfVxuICAgICAgICB9XG4gICAgfVxufVxuIiwiXG4vLyBCbHVlXG4kaWNlYnVyZzogI2QzZTZmOTtcbiRjbGVhci1za2llczogIzdjYjRlZTtcbiRjdXJpb3VzLWJsdWU6ICMyNTgzZTM7XG4kY3VyaW91cy1ibHVlLTUwOiByZ2JhKDM3LCAxMzEsIDIyNywgMC41KTtcbiRyb3lhbC1mYW1pbHk6ICMxZDY4YjU7XG4kZGVuaW06ICMxNjRlODg7XG5cbi8vIExpZ2h0IEdyZXlcbiR3aGl0ZS1saWxhYzogI2Y4ZjlmYztcbiRhdGhlbnMtZ3JleTogI2VhZWNmMTtcbiRiYWJ5LXNlYWw6ICNkZGRkZTQ7XG4kZ2hvc3Q6ICNjOWNhZDM7XG4kZG9scGhpbjogI2EwYTJhZDtcblxuLy8gRXJyb3JcbiRjb3R0b24tY2FuZHk6ICNmZGQ2ZGQ7XG4kcmVkLWhhemU6ICNmOTg2OTk7XG4kY2FuZHktcmVkOiAjZjUzNjU1O1xuJG1hcnMtcm92ZXI6ICNjNDJiNDQ7XG4kYnJpY2stbi1tb3J0YXI6ICM5MzIwMzM7XG5cblxuJHRleHQtcHJpbWFyeTogcmdiYSgwLDAsMCwwLjg3KTtcbiR0ZXh0LXNlY29uZGFyeTogcmdiYSgwLDAsMCwuNjgpO1xuJHRleHQtdGVydGlhcnk6IHJnYmEoMCwwLDAsLjUpO1xuJHRleHQtZGlzYWJsZWQ6IHJnYmEoMCwwLDAsLjM4KTtcblxuJHRhYmxlLXN0cmlwZS1jb2xvcjogcmdiYSgyMzQsMjM2LDI0MSwuMyk7XG4kdGFibGUtaGVhZGVyLWJvcmRlci1jb2xvcjogcmdiYSgwLDAsMCwwLjI0KTtcblxuXG4kY2FyZC1ib3gtc2hhZG93OiAwIDNweCAxcHggLTJweCByZ2JhKDAsMCwwLC4yKSwgMCAycHggMnB4IDAgcmdiYSgwLDAsMCwuMiksIDAgMXB4IDVweCAwIHJnYmEoMCwwLDAsLjE1KTtcbiRjYXJkLWJveC1zaGFkb3ctbGlnaHRlcjogMCAycHggMnB4IDAgcmdiYSgwLCAwLCAwLCAwLjI0KSwgMCAwIDJweCAwIHJnYmEoMCwgMCwgMCwgMC4xMik7XG5cblxuJW1hdGVyaWFsLWljb25zIHtcbiAgICBmb250LWZhbWlseTonTWF0ZXJpYWwgSWNvbnMnO1xuICAgIGZvbnQtc3R5bGU6bm9ybWFsO1xuICAgIGZvbnQtd2VpZ2h0OjQwMDtcbiAgICB0ZXh0LXRyYW5zZm9ybTogbm9uZTtcbiAgICBsZXR0ZXItc3BhY2luZzogbm9ybWFsO1xuICAgIHdvcmQtd3JhcDogbm9ybWFsO1xuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XG4gICAgZGlyZWN0aW9uOiBsdHI7XG5cbiAgICAvKiBTdXBwb3J0IGZvciBhbGwgV2ViS2l0IGJyb3dzZXJzLiAqL1xuICAgIC13ZWJraXQtZm9udC1zbW9vdGhpbmc6IGFudGlhbGlhc2VkO1xuICAgIC8qIFN1cHBvcnQgZm9yIFNhZmFyaSBhbmQgQ2hyb21lLiAqL1xuICAgIHRleHQtcmVuZGVyaW5nOiBvcHRpbWl6ZUxlZ2liaWxpdHk7XG5cbiAgICAvKiBTdXBwb3J0IGZvciBGaXJlZm94LiAqL1xuICAgIC1tb3otb3N4LWZvbnQtc21vb3RoaW5nOiBncmF5c2NhbGU7XG5cbiAgICAvKiBTdXBwb3J0IGZvciBJRS4gKi9cbiAgICBmb250LWZlYXR1cmUtc2V0dGluZ3M6ICdsaWdhJztcbn1cbiJdfQ== */
+
+
+// WEBPACK FOOTER //
+// ./admin/src/angular-overrides.scss

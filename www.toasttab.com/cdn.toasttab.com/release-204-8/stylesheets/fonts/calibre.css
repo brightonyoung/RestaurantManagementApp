@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Calibre';
+    src: url("https://cdn.toasttab.com/static/f267156215645657a9fd11b98cd63c6b11c34745/fonts/CalibreWeb-Regular.woff2") format("woff2"), url("https://cdn.toasttab.com/static/f267156215645657a9fd11b98cd63c6b11c34745/fonts/CalibreWeb-Regular.woff") format("woff"), url("https://cdn.toasttab.com/static/f267156215645657a9fd11b98cd63c6b11c34745/fonts/CalibreWeb-Regular.eot") format("embedded-opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibre';
+    src: url("https://cdn.toasttab.com/static/f267156215645657a9fd11b98cd63c6b11c34745/fonts/CalibreWeb-RegularItalic.woff2") format("woff2"), url("https://cdn.toasttab.com/static/f267156215645657a9fd11b98cd63c6b11c34745/fonts/CalibreWeb-RegularItalic.woff") format("woff"), url("https://cdn.toasttab.com/static/f267156215645657a9fd11b98cd63c6b11c34745/fonts/CalibreWeb-RegularItalic.eot") format("embedded-opentype");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Calibre';
+    src: url("https://cdn.toasttab.com/static/f267156215645657a9fd11b98cd63c6b11c34745/fonts/CalibreWeb-Light.woff2") format("woff2"), url("https://cdn.toasttab.com/static/f267156215645657a9fd11b98cd63c6b11c34745/fonts/CalibreWeb-Light.woff") format("woff"), url("https://cdn.toasttab.com/static/f267156215645657a9fd11b98cd63c6b11c34745/fonts/CalibreWeb-Light.eot") format("embedded-opentype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibre';
+    src: url("https://cdn.toasttab.com/static/f267156215645657a9fd11b98cd63c6b11c34745/fonts/CalibreWeb-Semibold.woff2") format("woff2"), url("https://cdn.toasttab.com/static/f267156215645657a9fd11b98cd63c6b11c34745/fonts/CalibreWeb-Semibold.woff") format("woff"), url("https://cdn.toasttab.com/static/f267156215645657a9fd11b98cd63c6b11c34745/fonts/CalibreWeb-Semibold.eot") format("embedded-opentype");
+    font-weight: 600;
+    font-style: normal;
+}

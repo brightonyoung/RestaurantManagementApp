@@ -1,0 +1,54 @@
+
+.footer {
+    p {
+      line-height: 150%;
+      font-size: 16px;
+    }
+    a {
+      text-decoration: none;
+      color: #FF4C00;
+    }
+
+    .footer-cols {
+      text-align: left;
+      padding: 0 0px 8px 24px;
+      vertical-align: top;
+      float: left;
+      width: 50%;
+    }
+
+    .toast-internal-footer-row .footer-cols {
+      word-break: break-all;
+    }
+
+    .footer-row {
+      text-align: center;
+      margin-left: 0px;
+    }
+
+    @media (max-width: 979px) {
+      .footer-cols {
+        text-align: center;
+        padding: 0 0 8px;
+        display: inline-block;
+        float: none;
+        min-width: 320px;
+      }
+
+      .footer-row {
+        margin-left: 0px;
+      }
+    }
+
+}
+
+@media print {
+  .footer {
+    display: none;
+  }
+}
+
+
+
+// WEBPACK FOOTER //
+// ./adminFrame/src/adminFooter.scss

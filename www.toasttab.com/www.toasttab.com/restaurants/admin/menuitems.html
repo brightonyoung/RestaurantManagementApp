@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" ng-strict-di>
+
+<head>
+    <title ng-bind-template="{{ $state.current.data.displayName }}">Items Database</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cdn.toasttab.com/release-204-8/images/favicon.ico" />
+
+    <link rel="apple-touch-icon-precomposed" sizes="192x192" href="https://cdn.toasttab.com/release-204-8/images/toast-iphone-icon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://cdn.toasttab.com/release-204-8/images/toast-iphone-icon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://cdn.toasttab.com/release-204-8/images/toast-iphone-icon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://cdn.toasttab.com/release-204-8/images/toast-iphone-icon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://cdn.toasttab.com/release-204-8/images/toast-iphone-icon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://cdn.toasttab.com/release-204-8/images/toast-iphone-icon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://cdn.toasttab.com/release-204-8/images/toast-iphone-icon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://cdn.toasttab.com/release-204-8/images/toast-iphone-icon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://cdn.toasttab.com/release-204-8/images/toast-iphone-icon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://cdn.toasttab.com/release-204-8/images/toast-iphone-icon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="32x32" href="https://cdn.toasttab.com/release-204-8/images/toast-iphone-icon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="16x16" href="https://cdn.toasttab.com/release-204-8/images/toast-iphone-icon.png">
+    <link rel="apple-touch-icon-precomposed" href="https://cdn.toasttab.com/release-204-8/images/toast-iphone-icon.png">
+
+    <script src="https://cdn.toasttab.com/release-204-8/javascripts/jquery-1.7.min.js"></script>
+
+    <script src="https://cdn.toasttab.com/release-204-8/javascripts/jquery.ba-hashchange.min.js"></script>
+    <script src="https://cdn.toasttab.com/release-204-8/javascripts/toast-jquery.tablednd.0.7.js"></script>
+    <script src="https://cdn.toasttab.com/release-204-8/javascripts/glance-screenshare-manager.js"></script>
+
+    <link href="https://cdn.toasttab.com/release-204-8/stylesheets/fonts/calibre.css" rel="stylesheet" type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.toasttab.com/release-204-8/bootstrap/css/toast-bootstrap-3-0.min.css?v=114" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.toasttab.com/release-204-8/bootstrap/css/toast-bootstrap-select-3-0.min.css?v=114" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.toasttab.com/release-204-8/bootstrap/css/toast-bootstrap-datepicker-3-0.min.css?v=114" />
+
+    <link href="https://cdn.toasttab.com/release-204-8/stylesheets/fonts/material-icons.css" rel="stylesheet" type='text/css'>
+
+    <script src="https://cdn.toasttab.com/release-204-8/bootstrap/js/toast-bootstrap.min.js"></script>
+    <script src="https://cdn.toasttab.com/release-204-8/bootstrap/js/bootstrap-select.min.js"></script>
+    <script src="https://cdn.toasttab.com/release-204-8/bootstrap/js/bootstrap-datepicker.min.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="//fast.appcues.com/appcues.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.toasttab.com/release-204-8/datatables/css/ColVis.css" />
+
+    <head>
+        <link href="https://cdn.toasttab.com/release-204-8/admin/app-9ed8d4486121c7396d97.css" rel="stylesheet">
+        <script async src='/cdn-cgi/bm/cv/669835187/api.js'></script>
+    </head>
+    <script type="text/javascript" src="https://cdn.toasttab.com/release-204-8/admin/vendor-bae15a911d87cba8e2b7.js"></script>
+    <script type="text/javascript" src="https://cdn.toasttab.com/release-204-8/admin/app-9ed8d4486121c7396d97.js"></script>
+
+    <head>
+        <link href="https://cdn.toasttab.com/release-204-8/adminFrame/app-bb759734b677255d6d76.css" rel="stylesheet">
+    </head>
+    <script type="text/javascript" src="https://cdn.toasttab.com/release-204-8/adminFrame/vendor-9c77bf624972a5d413c7.js"></script>
+    <script type="text/javascript" src="https://cdn.toasttab.com/release-204-8/adminFrame/app-bb759734b677255d6d76.js"></script> <input ng-non-bindable type="hidden" name="restaurantId" id="restaurantId" value="37950000000000000" />
+
+    <script>
+        $(function() {
+            Toast.init('https://s3.amazonaws.com/toasttab', 'https://cdn.toasttab.com/release-204-8');
+            Toast.trackUnsavedChanges();
+            Toast.confirmUnsavedChangesOnUnload();
+            ToastFrame.initAdminLayout(true);
+        });
+    </script>
+
+    <script>
+        function logWarnMessage(message, level) {
+            message += ", url=" + window.location;
+            $.ajax({
+                type: 'GET',
+                url: "/logutil/logwarnmessage?message=" + message
+            });
+        }
+    </script>
+
+    <script>
+        (function(apiKey) {
+            (function(p, e, n, d, o) {
+                var v, w, x, y, z;
+                o = p[d] = p[d] || {};
+                o._q = [];
+                v = ['initialize', 'identify', 'updateOptions', 'pageLoad'];
+                for (w = 0, x = v.length; w < x; ++w)(function(m) {
+                    o[m] = o[m] || function() {
+                        o._q[m === v[0] ? 'unshift' : 'push']([m].concat([].slice.call(arguments, 0)));
+                    };
+                })(v[w]);
+                y = e.createElement(n);
+                y.async = !0;
+                y.src = 'https://cdn.pendo.io/agent/static/' + apiKey + '/pendo.js';
+                z = e.getElementsByTagName(n)[0];
+                z.parentNode.insertBefore(y, z);
+            })(window, document, 'script', 'pendo');
+
+            pendo.initialize({
+                visitor: {
+                    id: '1f8b54de-28d1-4d6e-9241-36db0fd860b9'
+                },
+                account: {
+                    id: '573f659e-ab58-43db-9c5e-c132de2373d8',
+                }
+            });
+        })('21d7c162-0d47-4267-4e39-e46c3484c34c');
+    </script>
+
+    <script src="https://cdn.ravenjs.com/3.26.2/raven.min.js" crossorigin="anonymous"></script>
+    <script>
+        Raven.config('https://d1359692b35d40cf88aac842768d152b@sentry.io/112997', {
+            environment: (function() {
+                switch (window.location.hostname) {
+                    case 'www.toasttab.com':
+                        return 'prod';
+                    case 'stage.eng.toasttab.com':
+                        return 'stage';
+                    default:
+                        return 'other';
+                }
+            })()
+        }).install()
+
+        Raven.setUserContext({
+            email: 'dfernandez@frogandthebull.com',
+            guid: '1f8b54de-28d1-4d6e-9241-36db0fd860b9'
+        });
+        Raven.setExtraContext({
+            restaurantGuid: '573f659e-ab58-43db-9c5e-c132de2373d8',
+            restaurantId: '37950000000000000'
+        });
+    </script>
+    <script>
+        $(function() {
+            Toast.initTabs();
+        });
+    </script>
+    <script src="https://cdn.toasttab.com/release-204-8/javascripts/reporting.min.js?v=114"></script>
+</head>
+
+<body class="logged-in admin-web  toast-3-0" id="">
+    <div data-admin-frame-bootstrap>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div ng-non-bindable class="navbar-inner">
+                <div class="container fs-unmask">
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                    <a class="logo-header brand" href="/restaurants/admin/home" onclick="trackNavigationEvent('Home Link', 'Toast Logo', 'from Header')">
+                    <img src="https://cdn.toasttab.com/release-204-8/images/toast-logo-homepage.png" width="100" border="0" style="width: 100px;" />
+                </a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li>
+                                <a href="/restaurants/admin/home" class="restaurant-title" onclick="trackNavigationEvent('Home Link', 'Restaurant Name', 'from Header')">Frog &amp; The Bull</a>
+                            </li>
+                            <li class="dropdown" id="switch-restaurants-menu">
+                                <a href="" id="switch-toggle" class="dropdown-toggle" data-toggle="dropdown" onclick="trackNavigationEvent('Switch Restaurant', 'Toggle Dropdown', 'from Header')">Switch	Restaurant
+                                <b class="caret"></b>
+                            </a>
+                                <ul class="dropdown-menu" id="restaurant-switch-menu" style="padding-top:0;" data-loaded="false">
+                                    <li style="padding:0; display: none;" id="restaurant-switch-menu-search">
+                                        <input type="text" class="typeahead exclude-from-readonly" placeholder="Filter restaurants..." style="width: 100%;box-sizing:border-box;height:auto;padding:10px 15px;margin:0;border:none;outline:none;box-shadow:none;overflow:auto;" />
+                                    </li>
+                                    <li class="divider" style="margin-top:0"></li>
+                                    <li id="restaurant-switch-menu-loading-title" class="disabled"><a>Loading...</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <ul class="nav pull-right">
+                            <li class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                                Restaurant
+                                <b class="caret"></b>
+                            </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/restaurants/admin/home">Home</a></li>
+
+
+                                    <li class="dropdown-submenu">
+                                        <a href="">Menu</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a href="/restaurants/admin/menus/edit" onclick="trackNavigationEvent('Menu', 'Edit Menus', 'from Drop Down')">Edit Menus</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/menus/openitems" onclick="trackNavigationEvent('Menu', 'Open Items', 'from Drop Down')">Open Items</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/menus/menuitemtags" onclick="trackNavigationEvent('Menu', 'Item Tags', 'from Drop Down')">Item Tags</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/pricelevels" onclick="trackNavigationEvent('Menu', 'Price Levels', 'from Drop Down')">Price Levels</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/premodifiergroups" onclick="trackNavigationEvent('Menu', 'Pre Modifiers', 'from Drop Down')">Pre Modifiers</a>
+                                            </li>
+                                            <li>
+                                                <a href="/advancedproperties/bulkeditor" onclick="trackNavigationEvent('Menu', 'Advanced Properties', 'from Drop Down')">Advanced Properties</a>
+                                            </li>
+                                            <li>
+                                                <a href="/advancedproperties/priceeditor" onclick="trackNavigationEvent('Menu', 'Price Editor', 'from Drop Down')">Price Editor</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/menuitems" onclick="trackNavigationEvent('Menu', 'Items Database', 'from Drop Down')">Items Database</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="">Analytics &amp; Reports</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a href="/restaurants/admin/analytics/home/reporting-essentials" onclick="trackNavigationEvent('Analytics &amp; Reports', 'Toast Reporting Essentials', 'from Drop Down')">Toast Reporting Essentials</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/reports/home?reportName=orders" onclick="trackNavigationEvent('Analytics &amp; Reports', 'Sales Summary', 'from Drop Down')">Sales Summary</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/analytics/home/locations" onclick="trackNavigationEvent('Analytics &amp; Reports', 'Locations', 'from Drop Down')">Locations</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/analytics/home/sales" onclick="trackNavigationEvent('Analytics &amp; Reports', 'Sales', 'from Drop Down')">Sales</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/analytics/home/menu" onclick="trackNavigationEvent('Analytics &amp; Reports', 'Menu', 'from Drop Down')">Menu</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/analytics/home/labor" onclick="trackNavigationEvent('Analytics &amp; Reports', 'Labor', 'from Drop Down')">Labor</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/analytics/home/accounting" onclick="trackNavigationEvent('Analytics &amp; Reports', 'Accounting', 'from Drop Down')">Accounting</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/analytics/home/cash" onclick="trackNavigationEvent('Analytics &amp; Reports', 'Cash', 'from Drop Down')">Cash</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/analytics/home/guests/customers" onclick="trackNavigationEvent('Analytics &amp; Reports', 'Guests, Gift Cards, and Loyalty', 'from Drop Down')">Guests, Gift Cards, and Loyalty</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/analytics/home/kitchen" onclick="trackNavigationEvent('Analytics &amp; Reports', 'Kitchen', 'from Drop Down')">Kitchen</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/analytics/home/finance" onclick="trackNavigationEvent('Analytics &amp; Reports', 'Finance', 'from Drop Down')">Finance</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/analytics/home/toast-capital" onclick="trackNavigationEvent('Analytics &amp; Reports', 'Toast Capital', 'from Drop Down')">Toast Capital</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="">Manager</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a href="/restaurants/admin/checksearch" onclick="trackNavigationEvent('Manager', 'Find Checks &amp; Issue Refund', 'from Drop Down')">Find Checks &amp; Issue Refund</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/unlinkedrefund" onclick="trackNavigationEvent('Manager', 'Issue Unlinked Refund', 'from Drop Down')">Issue Unlinked Refund</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/transfercard" onclick="trackNavigationEvent('Manager', 'Transfer Gift Card', 'from Drop Down')">Transfer Gift Card</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/importcards/upload" onclick="trackNavigationEvent('Manager', 'Import Gift Cards', 'from Drop Down')">Import Gift Cards</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://central.toasttab.com/s/article/Ordering-New-Gift-Cards-1493086915804" target="_blank" onclick="trackNavigationEvent('Manager', 'Order Gift Cards', 'from Drop Down')">Order Gift Cards</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/reports/archiveordershome" onclick="trackNavigationEvent('Manager', 'Archive Test Orders', 'from Drop Down')">Archive Test Orders</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/sendNotifications/home" onclick="trackNavigationEvent('Manager', 'Send Notifications', 'from Drop Down')">Send Notifications</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/servicePrompts" onclick="trackNavigationEvent('Manager', 'Service Prompts', 'from Drop Down')">Service Prompts</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/configchanges" onclick="trackNavigationEvent('Manager', 'Publish Config', 'from Drop Down')">Publish Config</a>
+                                            </li>
+                                            <li>
+                                                <a href="/customers/shop" onclick="trackNavigationEvent('Manager', 'Toast Shop', 'from Drop Down')">Toast Shop</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="">Labor</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a href="/restaurants/admin/jobs" onclick="trackNavigationEvent('Labor', 'Jobs', 'from Drop Down')">Jobs</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/#/overtime_rules" onclick="trackNavigationEvent('Labor', 'Overtime Rules', 'from Drop Down')">Overtime Rules</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/tipdistribution/tipdistributionconfigs" onclick="trackNavigationEvent('Labor', 'Tip Withholding', 'from Drop Down')">Tip Withholding</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/users" onclick="trackNavigationEvent('Labor', 'Employees', 'from Drop Down')">Employees</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/breakconfig/home" onclick="trackNavigationEvent('Labor', 'Breaks', 'from Drop Down')">Breaks</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="">Marketing</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a href="/restaurants/admin/basicinfo" onclick="trackNavigationEvent('Marketing', 'Restaurant Info', 'from Drop Down')">Restaurant Info</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/schedule" onclick="trackNavigationEvent('Marketing', 'Hours / Services', 'from Drop Down')">Hours / Services</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/receipts" onclick="trackNavigationEvent('Marketing', 'Receipt Setup', 'from Drop Down')">Receipt Setup</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/marketing" onclick="trackNavigationEvent('Marketing', 'Email Marketing', 'from Drop Down')">Email Marketing</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurantguestfeedback/home" onclick="trackNavigationEvent('Marketing', 'Guest Feedback', 'from Drop Down')">Guest Feedback</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="">Kitchen / Dining Room</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a href="/restaurants/admin/kitchen/setup" onclick="trackNavigationEvent('Kitchen / Dining Room', 'Kitchen Setup', 'from Drop Down')">Kitchen Setup</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/menus/serviceareas" onclick="trackNavigationEvent('Kitchen / Dining Room', 'Service Areas', 'from Drop Down')">Service Areas</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/tables/home" onclick="trackNavigationEvent('Kitchen / Dining Room', 'Tables', 'from Drop Down')">Tables</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/kitchen/courses" onclick="trackNavigationEvent('Kitchen / Dining Room', 'Courses', 'from Drop Down')">Courses</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/kitchen/prepstations" onclick="trackNavigationEvent('Kitchen / Dining Room', 'Prep Stations', 'from Drop Down')">Prep Stations</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/kitchen/productionitems" onclick="trackNavigationEvent('Kitchen / Dining Room', 'Production Items', 'from Drop Down')">Production Items</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/kitchen/diningoptions" onclick="trackNavigationEvent('Kitchen / Dining Room', 'Dining Options', 'from Drop Down')">Dining Options</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/printing" onclick="trackNavigationEvent('Kitchen / Dining Room', 'Printers and Cash Drawers', 'from Drop Down')">Printers and Cash Drawers</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/kitchen/itemrouting" onclick="trackNavigationEvent('Kitchen / Dining Room', 'Item Routing', 'from Drop Down')">Item Routing</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/mealpacing" onclick="trackNavigationEvent('Kitchen / Dining Room', 'Meal Pacing', 'from Drop Down')">Meal Pacing</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="">Payments</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a href="/restaurants/admin/payments" onclick="trackNavigationEvent('Payments', 'Payment Options', 'from Drop Down')">Payment Options</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/payments/paymenttypes" onclick="trackNavigationEvent('Payments', 'Other Payment Options', 'from Drop Down')">Other Payment Options</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/houseaccount" onclick="trackNavigationEvent('Payments', 'House Accounts', 'from Drop Down')">House Accounts</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/#/discounts" onclick="trackNavigationEvent('Payments', 'Discounts', 'from Drop Down')">Discounts</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/customercredits" onclick="trackNavigationEvent('Payments', 'Customer Credits', 'from Drop Down')">Customer Credits</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/voidReasons/setup" onclick="trackNavigationEvent('Payments', 'Void Reasons', 'from Drop Down')">Void Reasons</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/noSaleReasons/setup" onclick="trackNavigationEvent('Payments', 'No Sale Reasons', 'from Drop Down')">No Sale Reasons</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/#/discount_reasons" onclick="trackNavigationEvent('Payments', 'Discount Reasons', 'from Drop Down')">Discount Reasons</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/menus/servicecharges" onclick="trackNavigationEvent('Payments', 'Service Charges', 'from Drop Down')">Service Charges</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/menus/taxrates" onclick="trackNavigationEvent('Payments', 'Tax Rates', 'from Drop Down')">Tax Rates</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/giftcards/configure" onclick="trackNavigationEvent('Payments', 'Gift Card Setup', 'from Drop Down')">Gift Card Setup</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://central.toasttab.com/s/toast-capital" target="_blank" onclick="trackNavigationEvent('Payments', 'Toast Capital', 'from Drop Down')">Toast Capital</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="">Other Setup</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a href="/restaurants/admin/posux" onclick="trackNavigationEvent('Other Setup', 'UI Options', 'from Drop Down')">UI Options</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/menus/salescategories" onclick="trackNavigationEvent('Other Setup', 'Sales Categories', 'from Drop Down')">Sales Categories</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/menus/revenuecenters" onclick="trackNavigationEvent('Other Setup', 'Revenue Centers', 'from Drop Down')">Revenue Centers</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/posux/devicegroups" onclick="trackNavigationEvent('Other Setup', 'Device Groups', 'from Drop Down')">Device Groups</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/payoutReasons/setup" onclick="trackNavigationEvent('Other Setup', 'Pay Out Reasons', 'from Drop Down')">Pay Out Reasons</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/glcodes/edit" onclick="trackNavigationEvent('Other Setup', 'GL Accounts', 'from Drop Down')">GL Accounts</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/delivery" onclick="trackNavigationEvent('Other Setup', 'Takeout / Delivery', 'from Drop Down')">Takeout / Delivery</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/prepdeliverytimes" onclick="trackNavigationEvent('Other Setup', 'Prep / Delivery Times', 'from Drop Down')">Prep / Delivery Times</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/onlineordering" onclick="trackNavigationEvent('Other Setup', 'Online Ordering', 'from Drop Down')">Online Ordering</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/onlineorderingschedule" onclick="trackNavigationEvent('Other Setup', 'Online Ordering Schedule', 'from Drop Down')">Online Ordering Schedule</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/consumerapp" onclick="trackNavigationEvent('Other Setup', 'Toast TakeOut App', 'from Drop Down')">Toast TakeOut App</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/notifications/edit" onclick="trackNavigationEvent('Other Setup', 'Notification Setup', 'from Drop Down')">Notification Setup</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/groups" onclick="trackNavigationEvent('Other Setup', 'Restaurant Groups', 'from Drop Down')">Restaurant Groups</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/finance/financialinfo" onclick="trackNavigationEvent('Other Setup', 'Financial Setup', 'from Drop Down')">Financial Setup</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/contactmgmt/home" onclick="trackNavigationEvent('Other Setup', 'Contact Settings', 'from Drop Down')">Contact Settings</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/export/home" onclick="trackNavigationEvent('Other Setup', 'Data Exports', 'from Drop Down')">Data Exports</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/barcodes" onclick="trackNavigationEvent('Other Setup', 'Barcode Config', 'from Drop Down')">Barcode Config</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/manageralert" onclick="trackNavigationEvent('Other Setup', 'Text Alert Setup', 'from Drop Down')">Text Alert Setup</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/restaurants/admin/customerfacingdisplay/home">Guest Display</a></li>
+                                    <li class="dropdown-submenu">
+                                        <a href="">Connect &amp; Learn</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a href="https://pos.toasttab.com/contact/refer?utm_source=toast-web&amp;utm_medium=product&amp;utm_campaign=refer-connectlearn" target="_blank" onclick="trackNavigationEvent('Connect &amp; Learn', 'Referral Program', 'from Drop Down')">Referral Program</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://pos.toasttab.com/community?utm_source=toast-web&amp;utm_medium=product&amp;utm_campaign=toast-web-community" target="_blank" onclick="trackNavigationEvent('Connect &amp; Learn', 'Toast Community', 'from Drop Down')">Toast Community</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://central.toasttab.com/s/?utm_source=web&amp;utm_medium=toastweb&amp;utm_campaign=toast-community" target="_blank" onclick="trackNavigationEvent('Connect &amp; Learn', 'Toast Central', 'from Drop Down')">Toast Central</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://central.toasttab.com/s/training-center" target="_blank" onclick="trackNavigationEvent('Connect &amp; Learn', 'Toast University', 'from Drop Down')">Toast University</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://doc.toasttab.com" target="_blank" onclick="trackNavigationEvent('Connect &amp; Learn', 'Technical Documentation', 'from Drop Down')">Technical Documentation</a>
+                                            </li>
+                                            <li>
+                                                <a class="screen-share-button" href="javascript:void(0);" onclick="trackNavigationEvent('Glance Screen Share', 'Clicked start Screen share', 'from Drop Down')">Share Your Screen</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a href="">Integrations</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a href="/restaurants/admin/integrations" onclick="trackNavigationEvent('Integrations', 'My Integrations', 'from Drop Down')">My Integrations</a>
+                                            </li>
+                                            <li>
+                                                <a href="/restaurants/admin/restaurantPartnerActionsReport" onclick="trackNavigationEvent('Integrations', 'My Integrations Activity', 'from Drop Down')">My Integrations Activity</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a href="https://central.toasttab.com/s/training-center">Training</a></li>
+
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a target="_blank" href="https://central.toasttab.com/s/?utm_campaign=toast-community&utm_medium=toastweb&utm_source=web" onclick="trackNavigationEvent('Connect & Learn', 'Toast Central', 'from Header')">Help</a>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                                 David Fernandez                                                                 <b class="caret"></b>
+                            </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/restaurants/users/show?guid=1f8b54de-28d1-4d6e-9241-36db0fd860b9">My Account</a></li>
+                                    <li><a href="/restaurants/users/changepassword?guid=1f8b54de-28d1-4d6e-9241-36db0fd860b9&toastUser=false">Change Password</a></li>
+
+                                    <li><a href="/restaurants/users/mfa">Multi-Factor Authentication</a></li>
+
+                                    <li class="divider"></li>
+                                    <li><a href="/logout">Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="admin-toolbar">
+                <div class="container">
+                    <div class="admin-col-left">
+                        <ul class="breadcrumb">
+                            <li>
+                                <a ng-non-bindable href="/restaurants/admin/home"><i class="icon-home" style="margin-right:3px;"></i>Home</a> <span class="divider">/</span>
+                            </li>
+                            <li class="">
+                                <a ng-non-bindable href="/restaurants/admin/menus/edit">Edit Menus</a> <span class="divider">/</span> </li>
+                            <li class="active">
+                                <span ng-non-bindable>Items Database</a>
+                        </li>
+                                                        <breadcrumb></breadcrumb>
+    </ul>
+    
+                    </div>
+                    <div class="admin-col-right">
+                        <div class="admin-toolbar-btns btn-toolbar">
+                </div>
+
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+</div>
+
+        
+        
+
+        <div class="wrapper">
+            
+            <div class="container">
+                <div class="content content-admin-toolbar">
+                    <div ng-non-bindable data-admin-frame-bootstrap data-admin-frame-body-bootstrap>
+                        <div class="">
+    <div class="alert hidden" id="sessionWarning">
+        <a class="close" data-dismiss="alert">×</a>
+        Another restaurant session was detected in this browser. Please close this session and continue working in the other session.
+    </div>
+</div>
+<script src="https://cdn.toasttab.com/release-204-8/javascripts/jquery.cookie.js"></script>
+<script>
+
+function getRestaurantId(){
+    var toastSessionCookie = $.cookie('TOAST_SESSION');
+    return toastSessionCookie.match(/[-&]rGuid=(.+?)[&"]/)[1];
+}
+
+var existingRestaurantId = getRestaurantId();
+window.onfocus = function(){
+    if (document.cookie.indexOf(existingRestaurantId) < 0) {
+        var elements = $("#sessionWarning");
+        if (elements.length>0) {
+            elements[0].className = "alert";
+        }
+    }
+};
+</script>
+                    </div>
+                    
+
+                    
+        
+    
+
+    
+
+                    
+<div class="row-fluid admin-content admin-offset">
+    <div ng-non-bindable>
+        <div id="notifications" class="indented" style="display: none">
+    
+
+
+</div>    </div>
+    
+
+    <script>
+$(function() {
+    Toast.editorCommon.init();
+
+    $('#setup-restaurants').css('margin-bottom', 'auto');
+
+    var includeArchivedCheckbox = $("#show-archived");
+    var showModifiersCheckbox = $("#show-mods");
+    var toolbar = $("#items-toolbar");
+
+    includeArchived = $.cookie('include-archived') ? $.cookie('include-archived') == 'true' : false;
+    showModifiers = $.cookie('show-modifiers') ? $.cookie('show-modifiers') == 'true' : true;
+
+    includeArchivedCheckbox.prop('checked', includeArchived);
+    showModifiersCheckbox.prop('checked', showModifiers);
+
+    var tabToLoad = $.cookie('current-tab') ? $.cookie('current-tab') : 'MenuItem';
+    var datatable = $("#" + tabToLoad + "-table");
+
+    datatable.parent().show();
+    $('#input-entity-class').val(tabToLoad);
+    $('.btn-menu-entity[data-entity-class="' + tabToLoad + '"]').addClass('active');
+
+    var showPriceColumn = tabToLoad == 'MenuItem' || tabToLoad == 'MenuOption';
+    var showSkuAndPluColumns = tabToLoad == 'MenuItem';
+    var showUsageColumn = tabToLoad == 'MenuItem' || tabToLoad == 'MenuOption' || tabToLoad == 'MenuOptionGroup';
+
+    var numberColumn = 3;
+    var importedIdColumn = 4;
+    var guidColumn = 5;
+    var priceColumn = 6;
+    var createdColumn = 7;
+    var archivedColumn = 8;
+    var isModifierColumn = 9;
+    var skuColumn = 10;
+    var pluColumn = 11;
+    var urlColumn = 12;
+    if(!showSkuAndPluColumns) {
+        urlColumn = 10;
+    }
+
+    if (!showUsageColumn) {
+        $('#archive-btn').show();
+        $('#restore-btn').show();
+        $('#version-btn').show();
+        $('#usage-btn').hide();
+    } else {
+        $('.btn-action').show();
+    }
+
+    if (tabToLoad == 'MenuItem') {
+        showModifiersCheckbox.parent().show();
+    } else {
+        showModifiersCheckbox.parent().hide();
+    }
+
+    //client-side filtering
+    $.fn.dataTableExt.afnFiltering.push(
+        function( settings, data, dataIndex ) {
+            var archived = data[archivedColumn] == "Yes";
+            var isModifier = data[isModifierColumn] == "Yes";
+            return (!archived || includeArchived) && (showModifiers || !isModifier);
+        }
+    );
+
+    // Bind click listeners
+    var handler = function() {
+        includeArchived = includeArchivedCheckbox.is(":checked");
+        showModifiers = showModifiersCheckbox.is(":checked");
+        if (datatable && datatable.isDataTable()) {
+            datatable.dataTable().fnDraw();
+        }
+    };
+    includeArchivedCheckbox.on('click', handler);
+    showModifiersCheckbox.on('click', handler);
+
+    /* pipelining logic */
+    var loadedStatus = {
+        "Menu": false,
+        "MenuGroup": false,
+        "MenuItem": false,
+        "MenuOptionGroup": false,
+        "MenuOption": false
+    };
+    var archiveOrRestoreAction = false;
+    var oCache = { iCacheLower: -1 };
+    function fnSetKey( aoData, sKey, mValue ) {
+        for ( var i=0, iLen=aoData.length ; i<iLen ; i++ ) {
+            if ( aoData[i].name == sKey ) {
+                aoData[i].value = mValue;
+            }
+        }
+    }
+    function fnGetKey( aoData, sKey ) {
+        for ( var i=0, iLen=aoData.length ; i<iLen ; i++ ) {
+            if ( aoData[i].name == sKey ) {
+                return aoData[i].value;
+            }
+        }
+        return null;
+    }
+
+    function fnDataTablesPipeline( sSource, aoData, fnCallback, oSettings) {
+        var pipeSize = 5;
+        var loadFromServer = false;
+        var sEcho = fnGetKey(aoData, "sEcho");
+        var requestStart = fnGetKey(aoData, "iDisplayStart");
+        var requestLength = fnGetKey(aoData, "iDisplayLength");
+        var requestEnd = requestStart + requestLength;
+        oCache.iDisplayStart = requestStart;
+
+        // pipeline needs more data
+        var currentTab = $('#input-entity-class').val();
+        if (loadedStatus[currentTab] == false) {
+            loadedStatus[currentTab] = true;
+            loadFromServer = true;
+        } else if (archiveOrRestoreAction) {
+            archiveOrRestoreAction = false;
+            loadFromServer = true;
+        } else if ( oCache.iCacheLower < 0 || requestStart < oCache.iCacheLower || requestEnd > oCache.iCacheUpper ) {
+            loadFromServer = true;
+        } else if ( oCache.lastRequest && !loadFromServer ) {
+            for( var i=0, iLen=aoData.length ; i<iLen ; i++ ) {
+                if ( aoData[i].name != "iDisplayStart"
+                    && aoData[i].name != "iDisplayLength"
+                    && aoData[i].name != "sEcho"
+                    && aoData[i].name != "iColumns") {
+                    if ( aoData[i].value != oCache.lastRequest[i].value ) {
+                        loadFromServer = true;
+                        break;
+                    }
+                }
+            }
+        }
+        // store the request for checking next time around
+        oCache.lastRequest = aoData.slice();
+
+        if (loadFromServer) {
+            requestStart = findStartOfUncachedData(requestStart, requestLength, oCache, pipeSize);
+            oCache.iCacheLower = requestStart;
+            oCache.iCacheUpper = requestStart + (requestLength * pipeSize);
+            oCache.iDisplayLength = fnGetKey( aoData, "iDisplayLength" );
+            fnSetKey( aoData, "iDisplayStart", requestStart );
+            fnSetKey( aoData, "iDisplayLength", requestLength*pipeSize );
+
+            Toast.getKeepAliveJson(sSource, aoData, function (json) {
+                var dataTable = oSettings.oInstance;
+                var page = dataTable.fnPagingInfo().iPage;
+
+                // Navigate to the first page if there's
+                // no data on the current page.
+                if (!json.data.length && page !== 0){
+                    // Small delay so the user sees the "empty table" message
+                    // before switching the page.
+                    setTimeout(function(){dataTable.fnPageChange(0)}, 500);
+                }
+
+                insertJsonToCache(json, oCache, fnCallback)
+            } );
+        } else {
+            json = jQuery.extend(true, {}, oCache.lastJson);
+            json.sEcho = sEcho; // update echo for each response
+            json.data.splice( 0, requestStart-oCache.iCacheLower );
+            json.data.splice( requestLength, json.data.length );
+            fnCallback(json);
+            return;
+        }
+    }
+
+    function findStartOfUncachedData(start, length, oCache, pipeSize) {
+        var updatedStartValue = start;
+        if (start < oCache.iCacheLower) {
+            updatedStartValue = start - (length * (pipeSize - 1));
+            if (updatedStartValue < 0) {
+                return 0;
+            }
+        }
+        return updatedStartValue;
+    }
+
+    function insertJsonToCache(json, oCache, fnCallback) {
+        oCache.lastJson = jQuery.extend(true, {}, json);
+        if (oCache.iCacheLower != oCache.iDisplayStart) {
+            json.data.splice( 0, oCache.iDisplayStart-oCache.iCacheLower );
+        }
+        json.data.splice( oCache.iDisplayLength, json.data.length );
+        fnCallback(json)
+    }
+
+    function loadServerSideTable(entityClass, showUsageColumn, showPriceColumn, showSkuAndPluColumns) {
+        var tableName = entityClass + "-table";
+        var table = $("#" + tableName);
+        var url = "/restaurants/admin/menuitems/serversidemenuentitiestable?className=" + entityClass;
+        var archiveTitle = $('.btn-menu-entity.active').text();
+        $('#archive-title').html(archiveTitle);
+
+        table.parent().mask("Loading...");
+
+        table.data('loaded', true);
+        table.parent().unmask();
+        table.show();
+
+        function renderLink(oObj, name) {
+            var nameLink = $('<a href="' + oObj.aData.url + "?id=" + oObj.aData.idString + '" target="_blank"></a>');
+            nameLink.text(oObj.aData.name);
+            var nameLinkHTMLString = nameLink.prop('outerHTML');
+            var deleted = oObj.aData.isDeleted == "Yes";
+            return (deleted ? nameLinkHTMLString + '&nbsp;&nbsp;<span style="color: red; font-size:12px;">archived</span>' : nameLinkHTMLString); } function renderCheckbox(oObj) { return '<label class="label-checkbox"><input type="checkbox" name="id" value="' + oObj.aData.idString + '" /></label>';
+                                } function renderView(oObj) { return showUsageColumn ? '<i class="icon-zoom-in"></i>' : ''; } function renderDate(oObj) { return new Date(oObj.aData.createdDate).toLocaleDateString(); } function renderArchived(oObj) { return
+                                oObj.aData.isDeleted ? "Yes" : "No"; } function renderIsModifier(oObj) { return oObj.aData.isModifier ? "Yes" : "No"; } //Ensure user entered text is encoded to avoid xss function renderText(oObj){ return htmlEncode(oObj.aData[oObj.mDataProp]);
+                                } function htmlEncode(value){ return $('
+                                <div/>').text(value).html(); } var columnDefs = [ { "bVisible": true, "bSortable": false, "fnRender": renderCheckbox, "aTargets": [ 0 ], "bUseRendered": false, "sClass": "center no-padding" }, { "bVisible": showUsageColumn, "bSortable":
+                                false, "fnRender": renderView, "aTargets": [ 1 ], "sClass": "center no-padding td-icon-zoom-in" }, { "fnRender": renderLink, "aTargets": [ 2 ], "bUseRendered": false }, { "bVisible": showPriceColumn, "aTargets": [ priceColumn
+                                ] }, { "bVisible": false, "aTargets": [ numberColumn ] }, { "bVisible": false, "aTargets": [ importedIdColumn ] }, { "bVisible": false, "aTargets": [ archivedColumn ] }, { "bVisible": false, "aTargets": [ isModifierColumn
+                                ] }, { "bVisible": false, "aTargets": [ guidColumn ] }, { "fnRender": renderDate, "aTargets": [createdColumn]}, { "fnRender": renderIsModifier, "aTargets": [isModifierColumn]}, { "fnRender": renderArchived, "aTargets":
+                                [archivedColumn]} ]; if (showSkuAndPluColumns) { columnDefs.push({ "bVisible": false, "fnRender": renderText, "aTargets": [ skuColumn ] }); columnDefs.push({ "bVisible": false, "fnRender": renderText, "aTargets": [ pluColumn
+                                ] }); }; var columnMapping = [ { "mDataProp": "idString" }, //checkbox column 0 { "mDataProp": null }, //showUsage column 1 { "mDataProp": "name" }, //name 2 { "mDataProp": "masterId" }, //number 3 { "mDataProp": "importedId"},
+                                //imported id 4 { "mDataProp": "guid"}, //guid 5 { "mDataProp": "basePrice"}, //price 6 8 { "mDataProp": "createdDate"}, //created 7 9 { "mDataProp": "isDeleted"}, //archived 8 10 { "mDataProp": "isModifier"} //is modifier
+                                9 11 ]; if (showSkuAndPluColumns) { columnMapping.push({ "mDataProp": "sku" }); //sku 10 12 columnMapping.push({ "mDataProp": "plu" }); //plu 11 13 } var aiExclude = [0, 1]; var currentTab = $('#input-entity-class').val();
+                                if (currentTab == 'Menu' || currentTab == "MenuOptionGroup") { aiExclude.push(priceColumn); } if (currentTab != 'MenuItem') { aiExclude.push(isModifierColumn); } var datatable = Toast.reporting.augmentTable(tableName, {
+                                "aaSorting":[[1, "asc"]], "bAutoWidth": false, "bServerSide": true, "fnServerParams": function(aoData) { aoData.push({"name": "showArchived", "value": includeArchived}); aoData.push({"name": "showModifiers", "value": showModifiers});
+                                }, "fnServerData": fnDataTablesPipeline, "async": false, "sDom": "
+                                < 'clearfix'< 'pull-left'i>
+                                    < 'excel-export'E>
+                                        < 'column-selector'C>f>
+                                            <l< 'pull-right'p>>t
+                                                < 'pull-right'p>", "bLengthChange": true, "iDisplayLength": 50, "sPaginationType": "full_numbers", "sAjaxSource": url, "sAjaxDataProp": "data", "aoColumns": columnMapping, "aoColumnDefs": columnDefs, "excelExportUrl": url
+                                                    + '&excel=true', "fnPreDrawCallback": function(oSettings) { if (oSettings._iDisplayLength
+                                                    < 0) { setDisplayToAll(oSettings) } }, "fnDrawCallback": showOrHidePaginationControls, "oLanguage": {
+                                                        "sZeroRecords": "No matching items", "sInfo": "Item count: _TOTAL_", "sInfoFiltered": " (of _MAX_)", "sLengthMenu": 'Display <select>'+ '<option value="50">50</option>'+ '<option value="100">100</option>'+
+                                                        '<option value="500">500</option>'+ '<option value="1000">1000</option>'+ '<option value="-1">All</option>'+ '</select> records', "oPaginate": { "sPrevious": "‹", "sNext": "›", "sFirst": "«", "sLast": "»" } }, "oColVis": {
+                                                        "aiExclude": aiExclude }, }); //adds a key debounce delay to the global filtering input of a table (legacy datatables only) datatable.dataTable().fnSetFilteringDelay(500); // Manually trigger search with enter
+                                                        key: $( 'input.search-query').bind( 'keyup', function(e) { if (e.keyCode==1 3) { datatable.dataTable().fnFilter(this.value); } }); Toast.enableMultiedit( "editor", undefined, tableName); function setDisplayToAll(oSettings)
+                                                        { oSettings._iDisplayLength=o Settings._iRecordsTotal } function showOrHidePaginationControls(oSettings) { if (oSettings._iRecordsDisplay <=o Settings._iDisplayLength) { $(this).closest(
+                                                        '.dataTables_wrapper').find( '.dataTables_paginate').toggle(false) } else { $(this).closest( '.dataTables_wrapper').find( '.dataTables_paginate').toggle(true) } } function showDialog(id, contentUrl, itemIds) { var dialog=$
+                                                        ( "#" + id); var dialogContent=d ialog.find( ".modal-content"); var dialogSubmit=d ialog.find( ".modal-footer .btn.btn-primary"); var notifications=d ialog.find( ".notifications"); dialogSubmit.prop(
+                                                        "disabled", true); dialogContent.empty().addClass( "loading"); notifications.empty(); dialog.modal().center(); var data=T oast.arrayToJqueryParams( 'ids', itemIds); $.post(contentUrl, data, function(html) { html=T
+                                                        oast.trimKeepalivePrefix(html); dialogContent.html(html); dialogContent.removeClass( "loading"); dialog.center(); if (dialogContent.find( '.usage.readonly').size()==0 ) { dialogSubmit.prop(
+                                                        "disabled", false); } }, 'text'); } var contentUrl={ MenuItem: "/restaurants/admin/menuitems/itemsusage", MenuOption: "/restaurants/admin/menuitems/modifiersusage", MenuOptionGroup:
+                                                        "/restaurants/admin/menuitems/modifiergroupsusage", Menu: "/restaurants/admin/menuitems/menususage", MenuGroup: "/restaurants/admin/menuitems/menugroupsusage" }; var archiveUrl={ MenuItem: "/restaurants/admin/menuitems/archiveitemsinfo", MenuOption:
+                                                        "/restaurants/admin/menuitems/archivemodifiersinfo", MenuOptionGroup: "/restaurants/admin/menuitems/archivemodifiergroupsinfo", Menu: "/restaurants/admin/menuitems/archivemenusinfo", MenuGroup: "/restaurants/admin/menuitems/archivemenugroupsinfo" };
+                                                        var archivePostUrl={ MenuItem: "/restaurants/admin/menuitems/archiveitems", MenuOption: "/restaurants/admin/menuitems/archivemodifiers", MenuOptionGroup:
+                                                        "/restaurants/admin/menuitems/archivemodifiergroups", Menu: "/restaurants/admin/menuitems/archivemenus", MenuGroup: "/restaurants/admin/menuitems/archivemenugroups" }; var restoreUrl={ MenuItem: "/restaurants/admin/menuitems/restoreitems", MenuOption:
+                                                        "/restaurants/admin/menuitems/restoremodifiers", MenuOptionGroup: "/restaurants/admin/menuitems/restoremodifiergroups", Menu: "/restaurants/admin/menuitems/restoremenus", MenuGroup: "/restaurants/admin/menuitems/restoremenugroups" }; var versionUrl={
+                                                        MenuItem: "/restaurants/admin/menuitems/versionitems", MenuOption: "/restaurants/admin/menuitems/versionmodifiers", MenuOptionGroup: "/restaurants/admin/menuitems/versionmodifiergroups", Menu:
+                                                        "/restaurants/admin/menuitems/versionmenus", MenuGroup: "/restaurants/admin/menuitems/versionmenugroups" }; function enableUsageDialog(usageUrl) { $( "#usage-btn").on( "multiedit" + tableName, function(e, ids) { if (entityClass==$ (
+                                                        '.btn-menu-entity.active').data( 'entity-class')) { showDialog( "usage-dialog", usageUrl, ids); } }); } function enableArchiveDialog(archiveUrl, submitCallback) { var selectedIds; $( "#archive-btn").on( "multiedit" + tableName,
+                                                        function(e, ids) { selectedIds=i ds; if (entityClass==$ ( '.btn-menu-entity.active').data( 'entity-class')) { showDialog( "archive-dialog", archiveUrl, ids); } }); if (submitCallback) { var dialogSubmit=$
+                                                        ( "#confirm-archive"); dialogSubmit.click(function(e) { if (entityClass==$ ( '.btn-menu-entity.active').data( 'entity-class')) { var actionBtns=t oolbar.find( ".multiedit"); actionBtns.prop(
+                                                        'disabled', true); submitCallback.call(this, e, selectedIds); } }); } } function enableVersionDialog() { $( "#version-btn").on( "multiedit" + tableName, function(e, ids) { if (entityClass==$ (
+                                                        '.btn-menu-entity.active').data( 'entity-class')) { $( '#new-version-detail-form').attr( 'action', versionUrl[entityClass]); $( '#new-version-detail-dialog').attr( 'entityIds', ids); $(
+                                                        '#new-version-detail-dialog input[name="entity"]').val(ids); $( '#new-version-detail-dialog').modal(); } }); } if (showUsageColumn) enableUsageDialog(contentUrl[entityClass]); enableVersionDialog(versionUrl[entityClass]); enableArchiveDialog(archiveUrl[entityClass],
+                                                        function(e, ids) { var btn=$ (this).prop( "disabled", true); var spinner=b tn.closest( ".modal-footer").find( "img").show(); var modal=$ (this).closest( ".modal"); var data=T oast.arrayToJqueryParams(
+                                                        'ids', ids); var authToken=$ ( "#authenticityContainer").find( "[name='authenticityToken']").val(); data.push({name: "authenticityToken", value:authToken}); if (entityClass==$ ( '.btn-menu-entity.active').data(
+                                                        'entity-class')) { $.post(archivePostUrl[entityClass], data, function(text) { text=T oast.trimKeepalivePrefix(text); var json=$ .parseJSON(text); spinner.hide(); btn.prop( "disabled", false); if (json.status==2 00)
+                                                        { modal.modal( 'hide'); Toast.alertMgr.success(json.message); archiveOrRestoreAction=t rue; datatable.dataTable().fnDraw(); } else { Toast.alertMgr.error(json.message); } }, 'text'); } }); var restoreBtn=$
+                                                        ( "#restore-btn"); var actionBtns=t oolbar.find( ".btn"); var spinner=t oolbar.find( "img"); restoreBtn.on( "multiedit" + tableName, function(e, ids) { if (entityClass==$ ( '.btn-menu-entity.active').data(
+                                                        'entity-class')) { actionBtns.prop( "disabled", true); spinner.show(); var data=T oast.arrayToJqueryParams( 'ids', ids); var authToken=$ ( "#authenticityContainer").find( "[name='authenticityToken']").val(); data.push({name:
+                                                        "authenticityToken", value:authToken}); $.post(restoreUrl[entityClass], data, function(text) { text=T oast.trimKeepalivePrefix(text); var json=$ .parseJSON(text); actionBtns.prop( "disabled", false); spinner.hide(); if
+                                                        (json.status==2 00) { Toast.alertMgr.success(json.message); archiveOrRestoreAction=t rue; datatable.dataTable().fnDraw(); } else { Toast.alertMgr.error(json.message); } }); } }); var versionBtn=$ (
+                                                        "#version-btn"); versionBtn.on( "multiedit", function(e, ids) { $( '#new-version-detail-dialog input[name="entity"]').val(ids); $( '#new-version-detail-dialog').modal(); }); if (showUsageColumn) { table.on(
+                                                        "click", "td.td-icon-zoom-in", function() { var id=$ (this).closest( "tr").find( ":checkbox").val(); showDialog( "usage-dialog", contentUrl[entityClass], [id]); }); } } loadServerSideTable(tabToLoad, showUsageColumn,
+                                                        showPriceColumn, showSkuAndPluColumns); $( '.btn-menu-entity').click(function() { $( '.btn-menu-entity').removeClass( 'active'); $(this).addClass( 'active'); var entityClass=$ (this).data(
+                                                        'entity-class'); $( '#input-entity-class').val(entityClass); var archiveTitle=$ ( '.btn-menu-entity.active').text(); $( '#archive-title').html(archiveTitle); var tableName=e ntityClass + "-table"; var table=$ (
+                                                        "#" + tableName); var showUsageColumn=t able.data( 'show-actions')==t rue; var showPriceColumn=t able.data( 'show-price')==t rue; var selected=T oast.findMultieditSelected(table); var actionBtns=t oolbar.find(
+                                                        ".multiedit"); actionBtns.prop( 'disabled', selected.length==0 ); if (!showUsageColumn) { $( '#usage-btn').hide(); } else { $( '#usage-btn').show(); } if (entityClass=='MenuItem' ) { showModifiersCheckbox.parent().show();
+                                                        } else { showModifiersCheckbox.parent().hide(); } $( '.table-parent').hide(); table.closest( '.table-parent').show(); // If we haven 't already loaded the data, load it from the server
+        datatable = table;
+        if (!table.data('loaded ')) {
+            loadServerSideTable(entityClass, showUsageColumn, showPriceColumn, entityClass == 'MenuItem ');
+        }
+
+        // Set cookie so this tab will show on reload, with show archive sticky
+        $.cookie('current-tab ', entityClass);
+    });
+
+    includeArchivedCheckbox.click(function() {
+        $.cookie('include-archived ', includeArchived);
+    });
+
+    showModifiersCheckbox.click(function() {
+        $.cookie('show-modifiers ', showModifiers);
+    });
+});
+
+/*jshint eqnull:true */
+/*!
+ * jQuery Cookie Plugin v1.1
+ * https://github.com/carhartl/jquery-cookie
+ *
+ * Copyright 2011, Klaus Hartl
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://www.opensource.org/licenses/mit-license.php
+ * http://www.opensource.org/licenses/GPL-2.0
+ */
+(function($, document) {
+
+    var pluses = /\+/g;
+    function raw(s) {
+        return s;
+    }
+    function decoded(s) {
+        return decodeURIComponent(s.replace(pluses, ' '));
+    }
+
+    $.cookie = function(key, value, options) {
+
+        // key and at least value given, set cookie...
+        if (arguments.length > 1 && (!/Object/.test(Object.prototype.toString.call(value)) || value == null)) {
+            options = $.extend({}, $.cookie.defaults, options);
+
+            if (value == null) {
+                options.expires = -1;
+            }
+
+            if (typeof options.expires === 'number ') {
+                var days = options.expires, t = options.expires = new Date();
+                t.setDate(t.getDate() + days);
+            }
+
+            value = String(value);
+
+            return (document.cookie = [
+                encodeURIComponent(key), '=', options.raw ? value : encodeURIComponent(value),
+                options.expires ? ' ; expires=' + options.expires.toUTCString() : ' ', // use expires attribute, max-age is not supported by IE
+                options.path    ? '; path=' + options.path : ' ',
+                options.domain  ? '; domain=' + options.domain : ' ',
+                options.secure  ? '; secure ' : ' '
+            ].join(' '));
+        }
+
+        // key and possibly options given, get cookie...
+        options = value || $.cookie.defaults || {};
+        var decode = options.raw ? raw : decoded;
+        var cookies = document.cookie.split('; ');
+        for (var i = 0, parts; (parts = cookies[i] && cookies[i].split('=')); i++) {
+            if (decode(parts.shift()) === key) {
+                return decode(parts.join('='));
+            }
+        }
+        return null;
+    };
+
+    $.cookie.defaults = {};
+
+})(jQuery, document);
+</script>
+
+
+<style>
+.menu-entity-table {
+    word-wrap: break-word;
+    table-layout: fixed;
+    text-rendering: optimizeSpeed;
+}
+.table-parent.masked {
+    min-height: 100px;
+}
+table tr.even td {
+    background-color:#f9f9f9;
+
+}
+table input[type=checkbox] {
+    margin: 0;
+}
+.menu-entity-table .icon-zoom-in {
+    cursor: pointer;
+    opacity: 0.7;
+}
+.show-archived {
+    float: right;
+    padding: 4px;
+}
+.modal-content.loading {
+    min-height: 200px;
+    background: transparent url(' https://cdn.toasttab.com/release-204-8/images/ajax-loader-big.gif ') no-repeat center center;
+}
+.archival-warning {
+    color: #b94a48;
+    font-size: 0.9em;
+    font-style: italic;
+}
+tr.readonly {
+    color:#bbb;
+}
+tr.readonly td a,
+tr.readonly td .archival-warning
+ {
+    opacity:0.5;
+}
+
+.readonly-warning {
+    font-weight:bold;
+}
+div.dataTables_filter {
+    margin-bottom: 0;
+    margin-left: 5px;
+    float: right;
+}
+.label-checkbox {
+    cursor:pointer;
+    width:100%;
+    height:30px;
+    line-height:26px;
+}
+.menu-entity-table .no-padding {
+    padding:0;
+    vertical-align:middle;
+}
+td.td-icon-zoom-in {
+    cursor:pointer;
+}
+#show-archived-label,
+#show-mods-label {
+    padding:8px 0;
+    display:inline;
+    float:right;
+}
+#show-mods-label {
+    margin-left:8px;
+}
+#show-mods-label .toast-checkbox,
+#show-archived-label .toast-checkbox {
+    margin-top:0;
+}
+
+.archive-title {
+    display: inline;
+}
+
+.paging_full_numbers {
+    height: 22px;
+    line-height: 22px;
+    padding: 5px;
+    margin-top: 5px !important;
+}
+.paging_full_numbers .paginate_button,
+.paging_full_numbers .paginate_active {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.paging_full_numbers .paginate_button {
+    background-color: transparent;
+    text-decoration: none !important;
+    color: rgba(0, 0, 0, 0.603);
+}
+.paging_full_numbers .paginate_button:hover {
+    background-color: #eaecf1;
+}
+.paging_full_numbers .paginate_active {
+    background-color: #eaecf1;
+    color: rgba(0,0,0,0.68);
+}
+.paging_full_numbers .paginate_button_disabled,
+.paging_full_numbers .paginate_button_disabled:hover,
+.paging_full_numbers .paginate_button_disabled:active {
+    color:rgba(0,0,0,0.24);
+    cursor:default;
+    background-color:transparent;
+}
+
+</style>
+
+<div id="editor">
+    <div id="authenticityContainer">
+        <input type="hidden" name="authenticityToken" value="360496c5a91ab8059b718ee81edac5eae1704fdd">
+    </div>
+    <form id="selected-sets-form" class="exclude-from-save" action="/restaurants/admin/menuitems/updateselectedsets">
+                                    
+<script>
+    var changeRestaurantSetDialog = $('#change-restaurant-set-dialog ');
+    var changeModalContent = changeRestaurantSetDialog.find('#change-modal-content ');
+    var submitBtn = changeRestaurantSetDialog.find('.btn-primary ');
+    submitBtn.prop('disabled ', true);
+
+
+    $('a.change-restaurant-set ').click(function (e) {
+        e.preventDefault();
+        if ($(this).hasClass('disabled ')) {
+            return;
+        }
+
+        changeRestaurantSetDialog.modal().center();
+    });
+    var shouldLoad = true;
+    changeRestaurantSetDialog.on('show ',
+            function () {
+                // Don't render again if you have already... if (!shouldLoad) { return; } //Prevents subsequent calls to get the same version information // (either spamming the button or getting the same data again) shouldLoad=f alse; $.get(
+                                                        '/restaurants/admin/menuitems/restaurantpicker', function (data) { changeModalContent.html(data); document.querySelector( '#allrestaurants-dropdown-container').removeAttribute( 'class'); submitBtn.click(function (e) { changeRestaurantSetDialog.modal(
+                                                        'hide'); }); submitBtn.prop( 'disabled', false); } ).fail( function () { // allow the user to try again... shouldLoad=t rue; changeRestaurantSetDialog.modal( 'hide'); // Do we need a better error message
+                                                        here? } ); } ); </script>
+                                                        </form>
+
+                                                        <div class="tabbable">
+                                                            <div class="toast-tab-collapse">
+                                                                <div class="toggle"><i class="icon-chevron-left"></i></div>
+                                                                <div class="toast-tab-wrapper">
+                                                                    <ul class="nav nav-tabs toast-tabs">
+                                                                        <li class="btn-menu-entity" data-entity-class="Menu"><a title="Menus">Menus</a></li>
+                                                                        <li class="btn-menu-entity" data-entity-class="MenuGroup"><a title="Menu Groups">Menu Groups</a></li>
+                                                                        <li class="btn-menu-entity" data-entity-class="MenuItem"><a title="Items">Items</a></li>
+                                                                        <li class="btn-menu-entity" data-entity-class="MenuOptionGroup"><a title="Modifier Groups">Modifier Groups</a></li>
+                                                                        <li class="btn-menu-entity" data-entity-class="MenuOption"><a title="Modifiers">Modifiers</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="btn-toolbar indented" id="items-toolbar" style="margin-top: 0">
+                                                            <button id="usage-btn" type="button" class="btn multiedit btn-action" disabled="disabled"><i class="icon-zoom-in"></i>&nbsp;View Usage</button>
+
+                                                            <div class="btn-group">
+                                                                <button id="archive-btn" type="button" class="btn multiedit btn-action" disabled="disabled"><i class="icon-inbox"></i>&nbsp;Archive</button>
+                                                                <button id="restore-btn" type="button" class="btn multiedit btn-action" disabled="disabled"><i class="icon-repeat"></i>&nbsp;Restore</button>
+                                                            </div>
+                                                            <img src="https://cdn.toasttab.com/release-204-8/images/ajax-loader-small.gif" style="margin-left:10px; display:none" />
+
+                                                            <input type="hidden" id="input-entity-class" value="MenuItem" />
+
+                                                            <span style="display:inline;">
+            <label id="show-mods-label" for="show-mods">
+                <input class="toast-checkbox" type="checkbox" id="show-mods" checked="checked" /><span toast-checkbox></span>&nbsp;Show Modifiers
+                                                            </label>
+                                                            <label id="show-archived-label" for="show-archived">
+                <input class="toast-checkbox" type="checkbox" id="show-archived" /><span toast-checkbox></span>&nbsp;Show Archived
+            </label>
+
+                                                            </span>
+                                                            <div style="clear:both"></div>
+                                                        </div>
+
+
+                                                        <div class="table-parent indented" style="display:none;">
+                                                            <table class="table table-bordered menu-entity-table" id="Menu-table" data-entity-class="Menu" data-loaded="false" data-show-actions="false" data-show-price="false" style="margin-top:10px;display:none;">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="center no-padding" style="width:32px;"><label class="label-checkbox"><input type="checkbox" data-multiedit-master="true" /></label></th>
+                                                                        <th class="center no-padding" style="width:32px;">&nbsp;</th>
+                                                                        <th style="width:20%;">Name</th>
+                                                                        <th style="width:24%;">Number</th>
+                                                                        <th style="width:18%;">Imported ID</th>
+                                                                        <th style="width:22%;">GUID</th>
+                                                                        <th style="width:13%;">Base Price</th>
+                                                                        <th style="width:18%;">Created</th>
+                                                                        <th style="width:18%;">Archived</th>
+                                                                        <th style="width:18%;">Modifier</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="table-parent indented" style="display:none;">
+                                                            <table class="table table-bordered menu-entity-table" id="MenuGroup-table" data-entity-class="MenuGroup" data-loaded="false" data-show-actions="false" data-show-price="false" style="margin-top:10px;display:none;">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="center no-padding" style="width:32px;"><label class="label-checkbox"><input type="checkbox" data-multiedit-master="true" /></label></th>
+                                                                        <th class="center no-padding" style="width:32px;">&nbsp;</th>
+                                                                        <th style="width:20%;">Name</th>
+                                                                        <th style="width:24%;">Number</th>
+                                                                        <th style="width:18%;">Imported ID</th>
+                                                                        <th style="width:22%;">GUID</th>
+                                                                        <th style="width:13%;">Base Price</th>
+                                                                        <th style="width:18%;">Created</th>
+                                                                        <th style="width:18%;">Archived</th>
+                                                                        <th style="width:18%;">Modifier</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="table-parent indented" style="display:none;">
+                                                            <table class="table table-bordered menu-entity-table" id="MenuItem-table" data-entity-class="MenuItem" data-loaded="false" data-show-actions="true" data-show-price="true" style="margin-top:10px;display:none;">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="center no-padding" style="width:32px;"><label class="label-checkbox"><input type="checkbox" data-multiedit-master="true" /></label></th>
+                                                                        <th class="center no-padding" style="width:32px;">&nbsp;</th>
+                                                                        <th style="width:20%;">Name</th>
+                                                                        <th style="width:24%;">Number</th>
+                                                                        <th style="width:18%;">Imported ID</th>
+                                                                        <th style="width:22%;">GUID</th>
+                                                                        <th style="width:13%;">Base Price</th>
+                                                                        <th style="width:18%;">Created</th>
+                                                                        <th style="width:18%;">Archived</th>
+                                                                        <th style="width:18%;">Modifier</th>
+                                                                        <th style="width:12%;">SKU</th>
+                                                                        <th style="width:12%;">PLU</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="table-parent indented" style="display:none;">
+                                                            <table class="table table-bordered menu-entity-table" id="MenuOption-table" data-entity-class="MenuOption" data-loaded="false" data-show-actions="true" data-show-price="true" style="margin-top:10px;display:none;">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="center no-padding" style="width:32px;"><label class="label-checkbox"><input type="checkbox" data-multiedit-master="true" /></label></th>
+                                                                        <th class="center no-padding" style="width:32px;">&nbsp;</th>
+                                                                        <th style="width:20%;">Name</th>
+                                                                        <th style="width:24%;">Number</th>
+                                                                        <th style="width:18%;">Imported ID</th>
+                                                                        <th style="width:22%;">GUID</th>
+                                                                        <th style="width:13%;">Base Price</th>
+                                                                        <th style="width:18%;">Created</th>
+                                                                        <th style="width:18%;">Archived</th>
+                                                                        <th style="width:18%;">Modifier</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="table-parent indented" style="display:none;">
+                                                            <table class="table table-bordered menu-entity-table" id="MenuOptionGroup-table" data-entity-class="MenuOptionGroup" data-loaded="false" data-show-actions="true" data-show-price="false" style="margin-top:10px;display:none;">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="center no-padding" style="width:32px;"><label class="label-checkbox"><input type="checkbox" data-multiedit-master="true" /></label></th>
+                                                                        <th class="center no-padding" style="width:32px;">&nbsp;</th>
+                                                                        <th style="width:20%;">Name</th>
+                                                                        <th style="width:24%;">Number</th>
+                                                                        <th style="width:18%;">Imported ID</th>
+                                                                        <th style="width:22%;">GUID</th>
+                                                                        <th style="width:13%;">Base Price</th>
+                                                                        <th style="width:18%;">Created</th>
+                                                                        <th style="width:18%;">Archived</th>
+                                                                        <th style="width:18%;">Modifier</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+
+                    </div>
+
+                    <div class="modal" id="usage-dialog" style="display: none;" data-backdrop="static">
+                        <div class="modal-header">
+                            <a class="close" data-dismiss="modal">x</a>
+                            <h3>View Usage</h3>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-content"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn" data-dismiss="modal" autocomplete="off">Done</button>
+                        </div>
+                    </div>
+
+                    <div class="modal" id="archive-dialog" style="display: none;" data-backdrop="static">
+                        <div class="modal-header">
+                            <a class="close" data-dismiss="modal">x</a>
+                            <h3 class="archive-title">Archive&nbsp;</h3>
+                            <h3 class="archive-title" id="archive-title"></h3>
+                        </div>
+                        <div class="modal-body">
+                            <div class="alert alert-info" style="margin-top:0">Archived items are not available on the POS. They will still appear in historical reporting and can be restored later if needed.</div>
+                            <div class="notifications"></div>
+                            <div class="modal-content"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <img src="https://cdn.toasttab.com/release-204-8/images/ajax-loader-small.gif" style="display:none; float: left;" />
+                            <button class="btn" data-dismiss="modal" autocomplete="off">Cancel</button>
+                            <button id="confirm-archive" class="btn btn-primary" autocomplete="off" disabled="disabled">Confirm Archive</button>
+                        </div>
+                    </div>
+                </div>
+                <div ng-non-bindable>
+                    <input type="hidden" name="authenticityToken" value="360496c5a91ab8059b718ee81edac5eae1704fdd">
+                </div>
+            </div>
+        </div>
+        <div class="push">
+            <!--//-->
+        </div>
+    </div>
+
+    <div ng-non-bindable data-admin-frame-bootstrap class="footer ">
+        <hr/>
+
+        <div class="container" style="color: gray;">
+
+
+
+        </div>
+
+        <p style="text-align: center;">
+            © Toast, Inc. 2021. All Rights Reserved. | <a href="http://support.toasttab.com">Support &amp; Training</a> | <a href="http://pos.toasttab.com/privacy">Privacy Policy</a> | <a href="http://pos.toasttab.com/terms-of-service">Terms of Service</a>            | <a href="http://pos.toasttab.com/merchant-agreement">Merchant Agreement</a> | <a href="http://status.toasttab.com">System Status</a>
+        </p>
+    </div>
+
+    <script src="//fast.appcues.com/14668.js"></script>
+    <script src="https://cdn.toasttab.com/release-204-8/javascripts/thirdPartyDataCollectors.js"></script>
+
+    <script src="https://cdn.toasttab.com/release-204-8/javascripts/toast-ganalytics.js"></script>
+    <script defer>
+        gaAdminLoad('UA-31548241-6',
+            '37950000000000000',
+            'Frog &amp; The Bull',
+            '100'
+        )
+
+        createCustomDimensions('Frog &amp; The Bull Management Group',
+            'Frog &amp; The Bull',
+            '573f659e-ab58-43db-9c5e-c132de2373d8',
+            'release-204-8',
+            'false');
+
+        $(function() {
+            ToastFrame.initAnalytics();
+        });
+    </script>
+
+    <div ng-non-bindable>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+        <style type='text/css'>
+            .embeddedServiceHelpButton .helpButton .uiButton {
+                background-color: #005290;
+                font-family: "Arial", sans-serif;
+            }
+
+            .embeddedServiceHelpButton .helpButton .uiButton:focus {
+                outline: 1px solid #005290;
+            }
+
+            .embeddedServiceSidebarButton.uiButton .label {
+                background-color: inherit;
+            }
+        </style>
+
+        <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+        <script type='text/javascript'>
+            var decodeHTML = function(html) {
+                var text = document.createElement('textarea');
+                text.innerHTML = html;
+                return text.value;
+            };
+
+            var initESW = function(gslbBaseURL) {
+                var chatConfig = {
+                    // salesforce config
+                    eswJSUrl: 'https://toast.my.salesforce.com/embeddedservice/5.0/esw.min.js',
+                    svcInitEndpoint: 'https://toast.my.salesforce.com',
+                    svcChatEndpoint: 'https://d.la3-c2-ph2.salesforceliveagent.com/chat',
+                    svcContentEndpoint: 'https://c.la3-c2-ph2.salesforceliveagent.com/content',
+                    deploymentId: '5723c000000k9iJ',
+                    buttonId: '573C00000008RMb',
+                    eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I3c0000000CK9EAM_174b30518e1',
+                    svcSiteEndpoint: 'https://central.toasttab.com/',
+                    snapinName: 'Toast_Web_Chat_V2',
+                    orgId: '00DC00000017Bak',
+                    displayHelpButton: true
+                };
+
+                embedded_svc.settings.displayHelpButton = chatConfig.displayHelpButton;
+                embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+
+                embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+                embedded_svc.settings.entryFeature = 'LiveAgent';
+                embedded_svc.settings.prepopulatedPrechatFields = {
+                    FirstName: decodeHTML('David'),
+                    LastName: decodeHTML('Fernandez'),
+                    Restaurant_Name__c: decodeHTML('Frog &amp; The Bull')
+                };
+
+                embedded_svc.init(
+                    chatConfig.svcInitEndpoint,
+                    chatConfig.svcSiteEndpoint,
+                    gslbBaseURL,
+                    chatConfig.orgId,
+                    chatConfig.snapinName, {
+                        baseLiveAgentContentURL: chatConfig.svcContentEndpoint,
+                        deploymentId: chatConfig.deploymentId,
+                        buttonId: chatConfig.buttonId,
+                        baseLiveAgentURL: chatConfig.svcChatEndpoint,
+                        eswLiveAgentDevName: chatConfig.eswLiveAgentDevName,
+                        isOfflineSupportEnabled: false
+                    }
+                );
+            };
+
+            if (!window.embedded_svc) {
+                var s = document.createElement('script');
+                s.setAttribute('src', chatConfig.eswJSUrl);
+                s.onload = function() {
+                    initESW(null);
+                };
+                document.body.appendChild(s);
+            } else {
+                initESW('https://service.force.com');
+            }
+        </script>
+    </div>
+
+    <div id="banquetPortalsContainer" data-tw-spa></div>
+    <script type="text/javascript">
+        (function() {
+            window['__CF$cv$params'] = {
+                r: '6107d3a77a62ecc3',
+                m: '0444fc514a252fef59518006eca30e74c64af5a8-1610464462-1800-AW/hAq15sCtiGg3XMy5Ug69W5fdZxeFIr9jXEtxQZ4oMcXxV9VwDAOkvfY+B3SnTo2Oqmw/tNuSh0LnxDOb7UXNETYL4qwpbuabqDMAsWN8W8IBSdxKKVY0ZAlqGlhUFmQzOrghdm8D+zHH2+JaZDWI=',
+                s: [0xa5a7721a48, 0xfbe171ef84],
+            }
+        })();
+    </script>
+</body>
+
+</html>

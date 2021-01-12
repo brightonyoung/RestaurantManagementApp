@@ -1,0 +1,87 @@
+html, body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* footer with sticky footer, based on https://gist.github.com/1855032 */
+html, body {
+  height: 100%;
+}
+
+html {
+  font-size:100%;
+  -webkit-text-size-adjust:100%;
+  -ms-text-size-adjust:100%;
+}
+
+body {
+  margin:0;
+  font-family:'Calibre',"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:16px;
+  line-height:20px;
+  color:rgba(0,0,0,0.87);
+  background-color:#fff;
+  letter-spacing:0.3px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container-fluid:before, .container-fluid:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.container-fluid:after {
+  clear: both;
+}
+
+.content {
+  padding-top: 44px;
+}
+
+@media (max-width: 979px) {
+  .content {
+    padding-top: 0;
+  }
+}
+
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -118px;
+
+  // RF-13591
+  &.chatMessage {
+    min-height: auto;
+  }
+}
+.push {
+  height: 118px;
+}
+/* end sticky footer */
+
+
+/* PRINT CSS */
+
+@media print {
+
+  .container .content {
+    padding-top: 0px;
+  }
+
+  #content_spacer {
+    display: none;
+  }
+
+  .push {
+    height: 0px;
+  }
+}
+
+
+
+// WEBPACK FOOTER //
+// ./adminFrame/src/adminFrame.scss
