@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/brightonyoung/RestaurantManagementApp/issues"
   },
-  "homepage": "https://github.com/brightonyoung/RestaurantManagementApp#readme"
+  "homepage": "https://github.com/brightonyoung/RestaurantManagementApp#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
